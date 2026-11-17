@@ -545,6 +545,54 @@ mark{background:color-mix(in srgb,var(--hub) 60%,transparent);color:inherit;bord
 .toast.out{opacity:0;transition:opacity .3s}
 @media (prefers-reduced-motion:no-preference){.toast{animation:tin .25s ease-out}}
 @keyframes tin{from{transform:translateY(12px);opacity:0}}
+
+
+/* 英文島遊戲 */
+.gameroot{display:grid;gap:16px}.gpart{display:grid}
+.game{gap:12px}
+.digwrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:720px){.digwrap{grid-template-columns:minmax(0,1fr)}}
+.digboard{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;background:#a77a4f;padding:10px;border-radius:20px;box-shadow:inset 0 3px 0 rgba(0,0,0,.15)}
+.dt{aspect-ratio:1;padding:6px;border-radius:14px;display:grid;place-items:center;min-width:0;
+  background:radial-gradient(circle at 30% 30%,#9c6b40 0 6%,transparent 7%),radial-gradient(circle at 70% 62%,#8a5c35 0 5%,transparent 6%),linear-gradient(#b98656,#9a6c42);box-shadow:0 4px 0 #6b4a2a}
+.dt:hover:not(:disabled){filter:brightness(1.08)}
+.dt.sel{outline:4px solid var(--hub);outline-offset:-2px}
+.dt.glow{animation:dglow 1s ease-in-out infinite alternate;outline:3px dashed #fff3b0;outline-offset:-4px}
+@keyframes dglow{to{box-shadow:0 4px 0 #6b4a2a,0 0 18px 4px #ffe066}}
+.dt.dug{background:#ecd6a8;box-shadow:inset 0 3px 6px rgba(107,74,42,.35);cursor:default;opacity:1}
+.dt.find{background:radial-gradient(circle,#fff6d6,#ecd6a8 70%)}
+.dt svg{width:88%;height:88%;display:block}
+.dt .peb{color:#a07a4f;font-weight:900;line-height:1;font-size:18px}
+.dt.shake{animation:shake .35s}
+@media (prefers-reduced-motion:reduce){.dt.glow{animation:none}}
+.digbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:10px;font-size:14px;color:var(--muted)}
+.digbar #digStat{flex:1 1 100%}
+.digfigbox{background:color-mix(in srgb,var(--en) 14%,var(--card));border-radius:18px;padding:10px}
+.digfig{width:100%;height:auto;display:block;max-height:190px}
+.digr{display:grid;gap:12px;min-width:0}.digl{min-width:0;max-width:480px;width:100%;justify-self:center}
+.digfig .pg.off rect{fill:none;stroke:var(--muted);stroke-width:2;stroke-dasharray:5 5}
+.digfig .pg.off text{fill:var(--muted);font:900 18px var(--display)}
+.digfound{display:grid;gap:6px;font-size:14px}
+.dchips{display:flex;flex-wrap:wrap;gap:6px}.dchips .chip small{color:var(--muted)}
+.digq{background:var(--card);border-radius:18px;padding:12px 16px;display:grid;gap:10px;align-content:start}
+.digq .opts button{padding:9px 14px}
+.dq{margin:0;font-size:16.5px}
+.digwin{display:grid;gap:14px}
+.digcard{display:grid;gap:4px;justify-items:center;text-align:center;background:linear-gradient(160deg,color-mix(in srgb,var(--hub) 40%,var(--card)),var(--card));border-radius:20px;padding:12px;box-shadow:0 4px 0 var(--btnb)}
+.dwr{display:grid;gap:10px;justify-items:start}
+.sortintro,.sortend{display:grid;gap:10px;justify-items:start}
+.sorthud{display:flex;flex-wrap:wrap;gap:6px 18px;font-weight:700;font-variant-numeric:tabular-nums}.sorthud #sH{color:#e8590c;letter-spacing:2px}
+.sortfield{position:relative;height:250px;border-radius:18px;background:linear-gradient(color-mix(in srgb,var(--en) 10%,var(--card)),var(--sand));overflow:hidden;border:2px dashed var(--line)}
+.scard{position:absolute;left:50%;transform:translateX(-50%);max-width:90%;box-sizing:border-box;background:var(--card);border-radius:16px;padding:10px 18px;box-shadow:0 4px 0 var(--btnb);display:grid;justify-items:center;text-align:center;font-size:18px;font-weight:700;transition:transform .3s,opacity .3s}
+.scard small{font-size:14px;color:var(--muted);font-weight:500}.scard em{font-style:normal;font-size:14px;color:var(--bad)}
+.scard.good{background:color-mix(in srgb,var(--ok) 30%,var(--card))}.scard.bad{background:color-mix(in srgb,var(--bad) 22%,var(--card))}
+.scard.toL{transform:translate(-120%,40px) scale(.7);opacity:0}.scard.toR{transform:translate(20%,40px) scale(.7);opacity:0}
+.sortbins{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sbin{display:grid;gap:2px;justify-items:center;padding:12px;border-radius:20px;font-size:18px}
+.sbin b{font-size:19px;font-family:var(--body)}.sbin span{font-size:13px;color:var(--muted)}.sbin small{font-size:12px;color:var(--muted)}
+.sbin[data-b="0"]{background:color-mix(in srgb,var(--math) 22%,var(--card))}.sbin[data-b="1"]{background:color-mix(in srgb,#f39a4a 26%,var(--card))}
+.sortsc{margin:0;font-size:18px}.sortsc b{font-family:var(--display);font-size:42px;color:var(--wood)}
+
 #confetti{position:fixed;inset:0;width:100%;height:100%;z-index:90;pointer-events:none;display:none}
 
 </style>
@@ -4732,6 +4780,7 @@ const Q=(q,o,a,e)=>({q,o,a,e}),F=(q,a,e)=>({q,a:Array.isArray(a)?a:[a],e}),T=(s,
 const U3=LESSONS.en.find(l=>l.n==="U3"),U4=LESSONS.en.find(l=>l.n==="U4");
 const ARW='<defs><marker id="enA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="fa"/></marker></defs>';
 Object.assign(U3,{
+  game:{dig:"soldier",sort:["inf"]},
   note:"課本 P.28–35：單字 Discovering the Past、閱讀（作者目的）、文法（動詞＋不定詞）、聽說、字尾 -ist、寫作（時態一致）。",
   figHint:"一張圖記住一個規則",
   points:[
@@ -4815,6 +4864,7 @@ Object.assign(U3,{
       M("A ＿＿ is a box that a dead body is put into.",["coffin","kiln","tomb"],0,"練習本這題容易配錯，coffin＝b。")]}]
 });
 Object.assign(U4,{
+  game:{dig:"dino",sort:["inf","wasw"]},
   note:"課本 P.36–45：單字、閱讀（預測）、文法（動詞＋動名詞）、聽說（重點與順序、用感官描述）、ie 發長音 e、可數／不可數名詞、描寫報告、時光膠囊。",
   figHint:"一張圖記住一個規則",
   points:[
@@ -5456,7 +5506,7 @@ const QREF=(()=>{
 /* ---------- state.js ---------- */
 /* ===== 資料層：偏好設定、每日活動、錯題本（間隔複習）、作答紀錄、雲端同步、備份 ===== */
 const PREF_KEY="prefs_v1",MIST_KEY="mist_v1",ACT_KEY="act_v1",EXAMS_KEY="exams_v1",META_KEY="meta_v1";
-const SYNC_KEYS=[PKEY,AV_KEY,"exam_v2","done",PREF_KEY,MIST_KEY,ACT_KEY,EXAMS_KEY];
+const SYNC_KEYS=[PKEY,AV_KEY,"exam_v2","done",PREF_KEY,MIST_KEY,ACT_KEY,EXAMS_KEY,"game_v1"];
 const pad2=n=>String(n).padStart(2,"0");
 const dayKey=(d=new Date())=>`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
 const dayNum=(d=new Date())=>Math.round(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5);
@@ -5830,12 +5880,176 @@ function renderSubject(p,k){
   $("#sbExam").addEventListener("click",()=>startExam(k));const m=$("#sbMist");if(m)m.addEventListener("click",()=>startReview(ms,S.name+"錯題複習"));
 }
 
+/* ===== 英文島遊戲：挖掘場（答對才能挖）＋文法分類（to V／V-ing、was／were） ===== */
+const GAME_KEY="game_v1";
+const gameLoad=()=>store.get(GAME_KEY,{}),gameSave=g=>{store.set(GAME_KEY,g);try{CLOUD.dirty()}catch(e){}};
+const GP=(k,a,b)=>`<g stroke="#6b4a2a" stroke-width="2" stroke-linejoin="round">${a}</g>`;
+const DIG_SETS={
+  soldier:{title:"兵馬俑修復任務",intro:"考古隊在陶俑坑裡挖到一尊碎掉的陶俑。答對一題才能挖開一格，找齊 6 塊碎片就能把它修好！",fvb:"0 0 140 230",
+    pieces:[
+      {id:"head",en:"head",zh:"頭",box:[34,0,72,62],svg:`<path d="M60 6c3-6 17-6 20 0l-2 10h-16z" fill="#8a6b4a"/><circle cx="70" cy="34" r="20" fill="#c99a6b"/><path d="M58 34h6M76 34h6M66 44q4 3 8 0" fill="none"/>`},
+      {id:"armor",en:"armor",zh:"盔甲",box:[34,52,72,74],svg:`<path d="M42 58h56l4 62H38z" fill="#9c7d5c"/><path d="M44 72h52M43 86h54M42 100h56M41 114h58M56 58v62M70 58v62M84 58v62" fill="none" stroke-width="1.4"/>`},
+      {id:"larm",en:"left arm",zh:"左手臂",box:[4,52,44,84],svg:`<path d="M40 62l-22 8-8 50 12 3 9-40 12-6z" fill="#b78a5e"/><circle cx="16" cy="124" r="6" fill="#c99a6b"/>`},
+      {id:"rarm",en:"right arm",zh:"右手臂",box:[92,52,44,84],svg:`<path d="M100 62l22 8 8 50-12 3-9-40-12-6z" fill="#b78a5e"/><circle cx="124" cy="124" r="6" fill="#c99a6b"/>`},
+      {id:"legs",en:"legs",zh:"雙腿",box:[38,116,64,82],svg:`<path d="M44 120h22l-2 72H48zM74 120h22l-4 72H76z" fill="#a8835c"/><path d="M46 140h18M76 140h18" fill="none" stroke-width="1.4"/>`},
+      {id:"feet",en:"feet and base",zh:"雙腳和底座",box:[22,184,96,44],svg:`<path d="M42 190h26v12H38zM72 190h26l4 12H72z" fill="#7d5d3d"/><rect x="24" y="204" width="92" height="20" rx="4" fill="#b5a089"/>`}],
+    treasures:[
+      {en:"jade",zh:"玉",svg:`<svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="#5fbf8f" stroke="#2f7a55" stroke-width="3"/><circle cx="30" cy="30" r="8" fill="#e9dcc0" stroke="#2f7a55" stroke-width="3"/></svg>`},
+      {en:"bronze coin",zh:"銅錢",svg:`<svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="#c08a3e" stroke="#7a5420" stroke-width="3"/><rect x="24" y="24" width="12" height="12" fill="#e9dcc0" stroke="#7a5420" stroke-width="3"/></svg>`},
+      {en:"sword",zh:"劍",svg:`<svg viewBox="0 0 60 60"><path d="M30 6l5 8v28h-10V14z" fill="#b9c3c7" stroke="#55626a" stroke-width="2.5"/><rect x="18" y="42" width="24" height="5" rx="2" fill="#7a5420"/><rect x="27" y="47" width="6" height="9" fill="#7a5420"/></svg>`}]},
+  dino:{title:"恐龍骨架大發現",intro:"Javier 在溪谷裡被絆倒的地方，還埋著更多骨頭！答對一題才能挖開一格，找齊 6 塊骨頭，把整副恐龍骨架拼起來！",fvb:"0 0 260 150",
+    pieces:[
+      {id:"skull",en:"skull",zh:"頭骨",box:[196,10,64,52],svg:`<path d="M206 30q8-18 34-16q18 2 16 16q-2 10-14 12l-10 2q-18 4-26-2z" fill="#efe3c6"/><circle cx="236" cy="24" r="5" fill="#6b4a2a"/><path d="M214 40l3 6 3-6 3 6 3-6 3 6 3-6" fill="none"/>`},
+      {id:"neck",en:"neck",zh:"脖子",box:[168,22,48,50],svg:`<path d="M178 66q10-26 30-38" fill="none" stroke="#efe3c6" stroke-width="10" stroke-linecap="round"/><path d="M178 66q10-26 30-38" fill="none" stroke-dasharray="2 7"/>`},
+      {id:"ribs",en:"ribs",zh:"肋骨",box:[100,40,84,64],svg:`<path d="M106 62q38-22 74 2" fill="none" stroke="#efe3c6" stroke-width="8" stroke-linecap="round"/>${[116,128,140,152,164].map(x=>`<path d="M${x} ${x<140?58:57}q4 18 0 32" fill="none" stroke="#efe3c6" stroke-width="5" stroke-linecap="round"/>`).join("")}`},
+      {id:"tail",en:"tail",zh:"尾巴",box:[4,46,106,48],svg:`<path d="M108 66q-40 4-60 10t-42 6" fill="none" stroke="#efe3c6" stroke-width="9" stroke-linecap="round"/><path d="M108 66q-40 4-60 10t-42 6" fill="none" stroke-dasharray="2 8"/>`},
+      {id:"front",en:"front legs",zh:"前腳",box:[150,78,40,66],svg:`<path d="M166 88l-4 26 6 22M176 88l2 26-4 22" fill="none" stroke="#efe3c6" stroke-width="7" stroke-linecap="round"/><path d="M162 138h12M170 138h12" fill="none" stroke-width="3"/>`},
+      {id:"back",en:"back legs",zh:"後腳",box:[96,80,48,66],svg:`<path d="M112 84l-6 28 8 26M128 84l4 28-6 26" fill="none" stroke="#efe3c6" stroke-width="9" stroke-linecap="round"/><path d="M108 142h14M122 142h14" fill="none" stroke-width="3"/>`}],
+    treasures:[
+      {en:"shell fossil",zh:"貝殼化石",svg:`<svg viewBox="0 0 60 60"><path d="M30 50L10 24q20-20 40 0z" fill="#e8c9a0" stroke="#7a5420" stroke-width="3"/><path d="M30 50L20 22M30 50V18M30 50l10-28" stroke="#7a5420" stroke-width="2"/></svg>`},
+      {en:"ammonite",zh:"菊石",svg:`<svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="#d6b98c" stroke="#7a5420" stroke-width="3"/><path d="M30 30m-4 0a4 4 0 1 1 8 0a8 8 0 1 1-16 0a12 12 0 1 1 24 0" fill="none" stroke="#7a5420" stroke-width="2.5"/></svg>`},
+      {en:"volcanic ash",zh:"火山灰",svg:`<svg viewBox="0 0 60 60"><rect x="6" y="14" width="48" height="10" fill="#9aa0a6" stroke="#55626a" stroke-width="2"/><rect x="6" y="26" width="48" height="10" fill="#c99a6b" stroke="#7a5420" stroke-width="2"/><rect x="6" y="38" width="48" height="10" fill="#9aa0a6" stroke="#55626a" stroke-width="2"/></svg>`}]}
+};
+const pieceSVG=(p,cls="")=>`<svg viewBox="${p.box.join(" ")}" class="${cls}">${GP(0,p.svg)}</svg>`;
+const figSVG=(set,got)=>`<svg viewBox="${set.fvb}" class="digfig" role="img" aria-label="${set.title}：已找到 ${got.length} / ${set.pieces.length} 塊">${set.pieces.map(p=>got.includes(p.id)?`<g class="pg on">${GP(0,p.svg)}</g>`:`<g class="pg off"><rect x="${p.box[0]+8}" y="${p.box[1]+8}" width="${p.box[2]-16}" height="${p.box[3]-16}" rx="8"/><text x="${p.box[0]+p.box[2]/2}" y="${p.box[1]+p.box[3]/2+5}" text-anchor="middle">?</text></g>`).join("")}</svg>`;
+
+/* 從這一課的題目做出挖掘用的題庫 */
+function gameQs(l){const out=[];
+  (l.qs||[]).forEach(q=>out.push({q:q.q,o:q.o,a:q.a,e:q.e}));
+  (l.drill||[]).forEach(d=>(d.items||[]).forEach(it=>{
+    if(d.type==="mc")out.push({q:it.s,o:it.o,a:it.a,e:it.e});
+    else if(d.type==="tf")out.push({q:it.s+"（True or False?）",o:["True","False"],a:it.a?0:1,e:it.e});
+    else if(d.type==="cls"&&d.labels.length<=4)out.push({q:`「${it.s}」屬於哪一類？`,o:d.labels,a:it.a,e:it.e})}));
+  const V=l.vocab||[];V.forEach((v,i)=>{const others=shuffle(V.filter((_,j)=>j!==i)).slice(0,3);
+    out.push({q:`「${v[1]}」的英文是哪一個？`,o:[v[0],...others.map(x=>x[0])],a:0,e:`${v[0]}＝${v[1]}`,say:v[0]});
+    out.push({q:`<span lang="en">${v[0]}</span> 是什麼意思？`,o:[v[1],...others.map(x=>x[1])],a:0,e:`${v[0]}＝${v[1]}`,say:v[0]})});
+  return out}
+const shuffleQ=q=>{const idx=shuffle(q.o.map((_,i)=>i));return {...q,o:idx.map(i=>q.o[i]),a:idx.indexOf(q.a)}};
+
+function mountDig(root,k,i,l){
+  const id=k+":"+i,set=DIG_SETS[l.game.dig],N=16;let G=gameLoad(),S=(G[id]=G[id]||{}).dig;
+  const newBoard=()=>{const cells=[...set.pieces.map((_,j)=>({t:"p",i:j})),...set.treasures.map((_,j)=>({t:"t",i:j}))];while(cells.length<N)cells.push({t:"e"});
+    return {cells:shuffle(cells),dug:[],miss:0,det:0,combo:0,done:false,best:(S&&S.best)||0,wins:(S&&S.wins)||0}};
+  if(!S||!S.cells)S=G[id].dig=newBoard();
+  const save=()=>{G=gameLoad();G[id]=G[id]||{};G[id].dig=S;gameSave(G)};
+  let pool=shuffle(gameQs(l)),qi=0,cur=null,sel=-1,glow=-1,busy=false;
+  const nextQ=()=>{if(qi>=pool.length){pool=shuffle(pool);qi=0}return shuffleQ(pool[qi++])};
+  const got=()=>S.cells.map((c,j)=>c.t==="p"&&S.dug.includes(j)?set.pieces[c.i].id:null).filter(Boolean);
+  const tres=()=>S.cells.map((c,j)=>c.t==="t"&&S.dug.includes(j)?set.treasures[c.i]:null).filter(Boolean);
+  const starsOf=m=>m<=2?3:m<=5?2:1;
+  root.innerHTML=`<div class="box wide game"><h3 class="h3row"><span>挖掘場：${set.title}</span><span class="hint">答對才能挖，連對 3 題得到一次探測器</span></h3>
+    <p class="hint" style="margin:0">${set.intro}</p>
+    <div class="digwrap"><div class="digl"><div class="digboard" id="digBoard" role="grid" aria-label="挖掘場，共 ${N} 格"></div>
+      <div class="digbar"><span id="digStat"></span><button type="button" id="digDet" class="fcbtn">探測器 ×<b id="digDetN">0</b></button><button type="button" id="digNew" class="ghost">重新挖一次</button></div></div>
+      <div class="digr"><div class="digfigbox" id="digFig"></div><div id="digQ" class="digq" aria-live="polite"></div><div id="digFound" class="digfound"></div></div></div></div>`;
+  const B=root.querySelector("#digBoard"),Q=root.querySelector("#digQ");
+  function draw(){const g=got();
+    B.innerHTML=S.cells.map((c,j)=>{const d=S.dug.includes(j);let inner="";
+      if(d)inner=c.t==="p"?pieceSVG(set.pieces[c.i],"dgi"):c.t==="t"?set.treasures[c.i].svg:`<span class="peb" aria-hidden="true">· ·<br>·</span>`;
+      const lab=d?(c.t==="p"?`第 ${j+1} 格：${set.pieces[c.i].en} ${set.pieces[c.i].zh}`:c.t==="t"?`第 ${j+1} 格：寶物 ${set.treasures[c.i].en}`:`第 ${j+1} 格：只有泥土`):`第 ${j+1} 格，還沒挖`;
+      return `<button type="button" class="dt${d?" dug":""}${d&&c.t!=="e"?" find":""}${j===sel?" sel":""}${j===glow&&!d?" glow":""}" data-j="${j}" aria-label="${lab}"${d||S.done?" disabled":""}>${inner}</button>`}).join("");
+    root.querySelector("#digFig").innerHTML=figSVG(set,g);
+    const t=tres();root.querySelector("#digFound").innerHTML=`<b>骨架／碎片 ${g.length} / ${set.pieces.length}</b>${g.length?`<div class="dchips">${set.pieces.filter(p=>g.includes(p.id)).map(p=>`<button type="button" class="chip" data-say="${p.en}" lang="en">${p.en}<small> ${p.zh}</small></button>`).join("")}</div>`:""}
+      <b>額外寶物 ${t.length} / ${set.treasures.length}</b>${t.length?`<div class="dchips">${t.map(x=>`<button type="button" class="chip" data-say="${x.en}" lang="en">${x.en}<small> ${x.zh}</small></button>`).join("")}</div>`:""}`;
+    root.querySelectorAll("[data-say]").forEach(b=>b.addEventListener("click",()=>speakEN(b.dataset.say)));
+    root.querySelector("#digStat").innerHTML=`已挖 ${S.dug.length} / ${N} 格・失誤 ${S.miss}・連對 ${S.combo}${S.best?`・最佳 ${STARS(S.best)}`:""}`;
+    root.querySelector("#digDetN").textContent=S.det;root.querySelector("#digDet").disabled=!S.det||S.done;
+    B.querySelectorAll(".dt:not([disabled])").forEach(b=>b.addEventListener("click",()=>pick(+b.dataset.j)));
+    if(S.done)finish(false)}
+  function pick(j){if(busy)return;sel=j;cur=nextQ();draw();
+    Q.innerHTML=`<p class="dq"><b>第 ${j+1} 格</b>：${cur.q}</p><div class="opts">${cur.o.map((o,x)=>`<button type="button" data-x="${x}">${String.fromCharCode(65+x)}. ${o}</button>`).join("")}</div><p class="expl" id="digE" hidden></p>`;
+    Q.querySelectorAll("[data-x]").forEach(b=>b.addEventListener("click",()=>answer(+b.dataset.x,b)));
+    const f=Q.querySelector("[data-x]");if(f)f.focus({preventScroll:true});Q.scrollIntoView({block:"nearest",behavior:"smooth"})}
+  function answer(x,btn){if(busy||!cur)return;busy=true;const ok=x===cur.a,all=Q.querySelectorAll("[data-x]");all.forEach(b=>b.disabled=true);
+    all[cur.a].classList.add("ok");if(!ok)btn.classList.add("no");const E=Q.querySelector("#digE");
+    if(cur.say)speakEN(cur.say);
+    if(ok){S.combo++;if(S.combo%3===0){S.det++;toast("連對 3 題！得到一次探測器。","star")}
+      const j=sel,c=S.cells[j];S.dug.push(j);if(glow===j)glow=-1;
+      let msg="這一格只有泥土，換一格試試。";
+      if(c.t==="p"){const p=set.pieces[c.i];msg=`挖到了 <b lang="en">${p.en}</b>（${p.zh}）！`;speakEN(p.en);toast(`找到 ${p.en} ${p.zh}！`,"good")}
+      else if(c.t==="t"){const t=set.treasures[c.i];msg=`意外發現寶物 <b lang="en">${t.en}</b>（${t.zh}）！`;speakEN(t.en)}
+      E.innerHTML=`<b class="okc">答對了！</b>${msg}`;E.hidden=false;
+      if(got().length===set.pieces.length){S.done=true;S.wins=(S.wins||0)+1;const st=starsOf(S.miss);S.best=Math.max(S.best||0,st);save();sel=-1;setTimeout(()=>{busy=false;draw();finish(true)},700);return}}
+    else{S.miss++;S.combo=0;E.innerHTML=`<b class="noc">還不能挖。</b>正確答案是 ${String.fromCharCode(65+cur.a)}。${cur.e||""}<br>再選一格，換一題挑戰。`;E.hidden=false;
+      const t=B.querySelector(`.dt[data-j="${sel}"]`);if(t){t.classList.add("shake");setTimeout(()=>t.classList.remove("shake"),400)}}
+    save();sel=-1;cur=null;setTimeout(()=>{busy=false;draw()},ok?550:250)}
+  function finish(fresh){const st=starsOf(S.miss);
+    Q.innerHTML=`<div class="digwin"><div class="digcard">${figSVG(set,set.pieces.map(p=>p.id))}<b>${set.title} 完成！</b><span>${STARS(st)}　失誤 ${S.miss} 次・已完成 ${S.wins} 次</span></div>
+      <div class="dwr"><p style="margin:0">把每個部位的英文念一遍：</p><div class="dchips">${set.pieces.map(p=>`<button type="button" class="chip" data-say2="${p.en}" lang="en">${p.en}<small> ${p.zh}</small></button>`).join("")}</div>
+      <p class="hint" style="margin:0">失誤 0–2 次 ★★★、3–5 次 ★★、6 次以上 ★。</p><button type="button" class="pri" id="digAgain">再挖一次（新的埋藏位置）</button></div></div>`;
+    Q.querySelectorAll("[data-say2]").forEach(b=>b.addEventListener("click",()=>speakEN(b.dataset.say2)));
+    Q.querySelector("#digAgain").addEventListener("click",reset);
+    if(fresh){try{confetti()}catch(e){}toast(`${set.title}完成！${"★".repeat(st)}`,"star")}}
+  function reset(){S=newBoard();save();glow=-1;Q.innerHTML="";draw()}
+  root.querySelector("#digNew").addEventListener("click",()=>{if(S.dug.length&&!S.done&&!confirm("要放棄這一場，重新埋藏嗎？"))return;reset()});
+  root.querySelector("#digDet").addEventListener("click",()=>{if(!S.det)return;const c=S.cells.map((c,j)=>c.t==="p"&&!S.dug.includes(j)?j:-1).filter(j=>j>=0);if(!c.length)return;
+    S.det--;glow=c[Math.floor(Math.random()*c.length)];save();draw();toast(`探測器嗶嗶響：第 ${glow+1} 格下面有東西！`)});
+  draw();if(!S.done)Q.innerHTML=`<p class="hint" style="margin:0">點一格開始挖。</p>`;
+  return ()=>{}}
+
+/* ---- 文法分類：卡片往下掉，送進正確的籃子 ---- */
+const SORT_SETS={
+  inf:{title:"to V 還是 V-ing？",left:"to＋原形",right:"V-ing",tip:"plan／want／decide／promise／hope／need／forget／try／learn ＋ to V；enjoy／finish／practice／keep／mind／avoid／imagine ＋ V-ing。",
+    make(){const toV=["plan","want","decide","promise","hope","need","forget","try","learn","agree"],ing=["enjoy","finish","practice","keep","don’t mind","avoid","imagine","miss"];
+      const acts=[["swim","swimming"],["read","reading"],["play","playing"],["visit","visiting"],["dance","dancing"],["dig","digging"],["draw","drawing"],["study","studying"],["fly a kite","flying a kite"],["clean","cleaning"],["cook","cooking"],["run","running"],["write","writing"],["explore","exploring"]];
+      const a=acts[Math.floor(Math.random()*acts.length)],side=Math.random()<.5?0:1,v=(side?ing:toV)[Math.floor(Math.random()*(side?ing:toV).length)];
+      return {txt:`I ${v} ＿＿.`,sub:`（${a[0]}）`,L:`to ${a[0]}`,R:a[1],ans:side,e:`${v.replace("don’t ","")} 後面接 ${side?"V-ing":"to＋原形"}：I ${v} ${side?a[1]:"to "+a[0]}.`,key:v}}},
+  wasw:{title:"was 還是 were？",left:"was",right:"were",tip:"單數可數名詞和不可數名詞（ash、water、sand、money、rice、clothing）用 was；複數名詞用 were。",
+    make(){const was=[["The dinosaur bone","單數"],["A lot of ash","ash 不可數"],["Some water","water 不可數"],["The sand","sand 不可數"],["The skull","單數"],["My money","money 不可數"],["The rice","rice 不可數"],["This layer","單數"],["The clothing","clothing 不可數"],["The jade","jade 不可數"]],
+      were=[["Many bones","複數"],["The dinosaurs","複數"],["Three kites","複數"],["The layers","複數"],["The clay soldiers","複數"],["My shoes","複數"],["The paleontologists","複數"],["Two skulls","複數"],["The generals","複數"]];
+      const side=Math.random()<.5?0:1,x=(side?were:was)[Math.floor(Math.random()*(side?were:was).length)];
+      return {txt:`${x[0]} ＿＿ in the ravine.`,sub:"",L:"was",R:"were",ans:side,e:`${x[0]}：${x[1]} → ${side?"were":"was"}`,key:x[0]}}}
+};
+function mountSort(root,k,i,l){
+  const id=k+":"+i,modes=l.game.sort;let mode=modes[0],raf=0,run=null;
+  const best=m=>((gameLoad()[id]||{}).sort||{})[m]||0;
+  root.innerHTML=`<div class="box wide game"><h3 class="h3row"><span>文法分類：接住掉下來的卡片</span><span class="hint">按左右籃子，或用鍵盤 ← →</span></h3>
+    <div class="chips" id="sortModes">${modes.map(m=>`<button type="button" class="chip" data-m="${m}">${SORT_SETS[m].title}</button>`).join("")}</div>
+    <div id="sortRoot"></div></div>`;
+  const R=root.querySelector("#sortRoot");
+  const stop=()=>{cancelAnimationFrame(raf);run=null;document.removeEventListener("keydown",onKey)};
+  function intro(){stop();const M=SORT_SETS[mode];root.querySelectorAll("[data-m]").forEach(b=>{b.classList.toggle("on",b.dataset.m===mode);b.setAttribute("aria-pressed",b.dataset.m===mode)});
+    R.innerHTML=`<div class="sortintro"><p style="margin:0"><b>${M.title}</b>　${M.tip}</p><p class="hint" style="margin:0">一回 20 張卡片、3 顆愛心。卡片掉到底還沒分類也算錯；越答越快，連對有加分。${best(mode)?`最高分：<b>${best(mode)}</b>`:""}</p><button type="button" class="pri" id="sortGo">開始</button></div>`;
+    R.querySelector("#sortGo").addEventListener("click",start)}
+  function onKey(e){if(!run)return;if(e.key==="ArrowLeft"){e.preventDefault();choose(0)}else if(e.key==="ArrowRight"){e.preventDefault();choose(1)}}
+  function start(){const M=SORT_SETS[mode];stop();
+    run={n:0,score:0,hearts:3,combo:0,card:null,y:0,dur:6.5,t0:0,wrong:[],lock:false};
+    R.innerHTML=`<div class="sorthud"><span id="sH"></span><span id="sS"></span><span id="sN"></span></div>
+      <div class="sortfield" id="sF"><div class="scard" id="sC" aria-live="assertive"></div></div>
+      <div class="sortbins"><button type="button" class="sbin" data-b="0"><small>←</small><b id="bL"></b><span>${M.left}</span></button><button type="button" class="sbin" data-b="1"><small>→</small><b id="bR"></b><span>${M.right}</span></button></div>`;
+    R.querySelectorAll(".sbin").forEach(b=>b.addEventListener("click",()=>choose(+b.dataset.b)));document.addEventListener("keydown",onKey);
+    next()}
+  function hud(){R.querySelector("#sH").textContent="♥".repeat(run.hearts)+"♡".repeat(3-run.hearts);R.querySelector("#sS").textContent=`分數 ${run.score}`;R.querySelector("#sN").textContent=`第 ${Math.min(run.n,20)} / 20 張${run.combo>1?`・連對 ${run.combo}`:""}`}
+  function next(){if(!run)return;if(run.n>=20||run.hearts<=0)return end();
+    const M=SORT_SETS[mode];run.card=M.make();run.n++;run.lock=false;run.dur=Math.max(2.6,6.5-run.n*.2);run.t0=performance.now();
+    const C=R.querySelector("#sC");C.className="scard";C.innerHTML=`<span lang="en">${run.card.txt}</span>${run.card.sub?`<small lang="en">${run.card.sub}</small>`:""}`;C.style.top="0px";
+    R.querySelector("#bL").textContent=run.card.L;R.querySelector("#bR").textContent=run.card.R;hud();
+    const F=R.querySelector("#sF");
+    const tick=now=>{if(!run||run.lock)return;const p=(now-run.t0)/1000/run.dur,max=F.clientHeight-C.offsetHeight-6;C.style.top=Math.min(1,p)*max+"px";
+      if(p>=1){choose(-1);return}raf=requestAnimationFrame(tick)};raf=requestAnimationFrame(tick)}
+  function choose(b){if(!run||run.lock||!run.card)return;run.lock=true;cancelAnimationFrame(raf);const c=run.card,ok=b===c.ans,C=R.querySelector("#sC");
+    if(ok){run.combo++;run.score+=10+Math.min(run.combo-1,5)*2;C.classList.add("good",c.ans?"toR":"toL")}
+    else{run.combo=0;run.hearts--;run.wrong.push(c);C.classList.add("bad");C.innerHTML+=`<em>${b<0?"來不及了！":"放錯籃子！"}答案是 ${c.ans?c.R:c.L}</em>`}
+    hud();setTimeout(next,ok?380:1500)}
+  function end(){const sc=run.score,w=run.wrong,M=SORT_SETS[mode];stop();
+    const G=gameLoad();G[id]=G[id]||{};G[id].sort=G[id].sort||{};const old=G[id].sort[mode]||0,nb=sc>old;if(nb){G[id].sort[mode]=sc;gameSave(G)}
+    if(nb&&sc>0){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc"><b>${sc}</b> 分${nb&&sc>0?`　<span class="streak">新紀錄！</span>`:`　最高 ${Math.max(old,sc)} 分`}</p>
+      ${w.length?`<div class="pwrong"><h4>這幾張要再記一下</h4>${[...new Map(w.map(x=>[x.key,x])).values()].map(x=>`<div class="wr"><span lang="en">${x.txt.replace("＿＿",`<b>${x.ans?x.R:x.L}</b>`)}</span><p class="expl">${x.e}</p></div>`).join("")}</div>`:`<p class="pallok">全部分對，太厲害了！</p>`}
+      <p class="hint" style="margin:0">${M.tip}</p><button type="button" class="pri" id="sortRe">再玩一次</button></div>`;
+    R.querySelector("#sortRe").addEventListener("click",start)}
+  root.querySelectorAll("[data-m]").forEach(b=>b.addEventListener("click",()=>{mode=b.dataset.m;intro()}));
+  intro();return stop}
+
+const GAME={mount(el,k,i){const l=LESSONS[k][i];const a=document.createElement("div"),b=document.createElement("div");a.className=b.className="gpart";el.innerHTML="";el.append(a,b);
+  const s1=l.game.dig?mountDig(a,k,i,l):()=>{},s2=l.game.sort?mountSort(b,k,i,l):()=>{};return ()=>{s1();s2()}}};
+
 /* ---- 課程：重點／生字・單字／實驗／練習 四個分頁 ---- */
 const prevBadge=r=>r===null?"":`<span class="prev ${r?"ok":"no"}">${r?"上次答對":"上次答錯"}</span>`;
 function renderLesson(p,k,i){
   const S=SUBJECTS[k],l=LESSONS[k][i],id=k+":"+i;CUR=id;
   const hasWords=!!(l.words||l.vocab),nq=lessonTotal(l),termsInWords=!!l.words&&!!l.terms;
-  const tabs=[["read","重點",!!l.points],["words",l.vocab?"單字":"生字",hasWords],["lab","小實驗",!!l.lab],["quiz",`練習${nq?` ${nq}`:""}`,nq>0||!!(l.drill)]].filter(t=>t[2]);
+  const tabs=[["read","重點",!!l.points],["words",l.vocab?"單字":"生字",hasWords],["lab","小實驗",!!l.lab],["game","遊戲",!!l.game],["quiz",`練習${nq?` ${nq}`:""}`,nq>0||!!(l.drill)]].filter(t=>t[2]);
   let tab=TAB[id]&&tabs.some(t=>t[0]===TAB[id])?TAB[id]:(tabs[0]||["read"])[0];
   const prev=LESSONS[k][i-1],next=LESSONS[k][i+1];
   const termsBox=l.terms?`<div class="box wide"><h3 class="h3row"><span>${l.termsTitle||"詞語解釋"}</span>${l.terms.length>2?`<button type="button" class="fcbtn" data-fc="terms">${ICON("cards")}快閃卡</button>`:""}</h3><dl class="terms">${l.terms.map(t=>`<dt>${t[0]}</dt><dd>${t[1]}</dd>`).join("")}</dl></div>`:"";
@@ -5858,13 +6072,14 @@ function renderLesson(p,k,i){
   <div class="tp" id="tp_read" role="tabpanel" aria-labelledby="tab_read" hidden>${read}</div>
   <div class="tp" id="tp_words" role="tabpanel" aria-labelledby="tab_words" hidden>${words}</div>
   <div class="tp" id="tp_lab" role="tabpanel" aria-labelledby="tab_lab" hidden>${l.lab?LABBOX(l):""}</div>
+  <div class="tp" id="tp_game" role="tabpanel" aria-labelledby="tab_game" hidden><div id="gameroot" class="gameroot"></div></div>
   <div class="tp" id="tp_quiz" role="tabpanel" aria-labelledby="tab_quiz" hidden>${quiz}</div>`
   :`<p class="empty">這座小島還是空地。拍下這一課的課本頁面傳給 Claude，就會整理成「學習重點」和「練習題」放上來。</p>`}
   <div class="lnav">${prev?`<button type="button" data-go="${k}:${i-1}">← ${prev.t}</button>`:"<span></span>"}${nq?`<button type="button" id="lreset" class="ghost">重新挑戰這一課</button>`:""}${next?`<button type="button" data-go="${k}:${i+1}">${next.t} →</button>`:"<span></span>"}</div>`;
   /* 分頁 */
   const setTab=(t,focus)=>{tab=t;TAB[id]=t;p.querySelectorAll(".tabs [data-tab]").forEach(b=>{const on=b.dataset.tab===t;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;b.classList.toggle("on",on);if(on&&focus)b.focus()});
     p.querySelectorAll(".tp").forEach(x=>x.hidden=x.id!=="tp_"+t);
-    if(labStop){try{labStop()}catch(e){}labStop=null}if(t==="lab"&&l.lab)labStop=l.lab.run($("#labroot"));stopSpeak()};
+    if(labStop){try{labStop()}catch(e){}labStop=null}if(t==="lab"&&l.lab)labStop=l.lab.run($("#labroot"));if(t==="game"&&l.game)labStop=GAME.mount($("#gameroot"),k,i);stopSpeak()};
   p.querySelectorAll(".tabs [data-tab]").forEach((b,bi,all)=>{b.addEventListener("click",()=>setTab(b.dataset.tab));
     b.addEventListener("keydown",e=>{const d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(d){e.preventDefault();setTab(all[(bi+d+all.length)%all.length].dataset.tab,true)}})});
   if(tabs.length)setTab(tab);
