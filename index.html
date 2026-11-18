@@ -547,6 +547,73 @@ mark{background:color-mix(in srgb,var(--hub) 60%,transparent);color:inherit;bord
 @keyframes tin{from{transform:translateY(12px);opacity:0}}
 
 
+
+/* 國文、社會遊戲 */
+.late{color:var(--bad)}
+.fhsents{display:grid;gap:10px}
+.fhs{margin:0;display:flex;flex-wrap:wrap;align-items:center;background:var(--card);border-radius:16px;padding:10px 12px;font-size:21px;line-height:1.6}
+.fhc{padding:0 1px;min-width:1.25em;font-size:21px;background:transparent;box-shadow:none;border-radius:8px}
+.fhc:hover:not(:disabled){background:var(--sand)}
+.fhc.sel{background:color-mix(in srgb,var(--hub) 50%,var(--card))}
+.fhc.nope{color:var(--muted)}
+.fhc.fixed{background:color-mix(in srgb,var(--ok) 30%,var(--card));color:var(--ink);font-weight:900;opacity:1}
+.fhc.shake,.cjopts .shake{animation:shake .35s}
+.fhp{color:var(--muted)}
+.fhpick{background:var(--card);border-radius:16px;padding:12px 14px;display:grid;gap:8px}
+.fhopts{display:flex;flex-wrap:wrap;gap:10px}.fhopts button{font-size:24px;min-width:2.4em;padding:6px 14px}
+.fhopts button.no{background:color-mix(in srgb,var(--bad) 26%,var(--card))}
+.okc{color:var(--ok)}.noc{color:var(--bad)}
+.cpsent{margin:0;font-size:22px;text-align:center;background:var(--card);border-radius:16px;padding:12px}
+.cpblank{display:inline-block;min-width:1.4em;border-bottom:3px solid var(--zh);color:var(--zh);font-weight:900}.cpblank.ok{color:var(--ok);border-color:var(--ok)}
+.cpbench{display:flex;align-items:center;justify-content:center;gap:10px;font-size:34px;font-weight:700}
+.cpbase,.cpslot,.cpout{display:grid;place-items:center;min-width:1.8em;height:1.8em;border-radius:16px;background:var(--card);box-shadow:0 3px 0 var(--line)}
+.cpbase{background:var(--hub);color:#4a3720}.cpout.ok{background:color-mix(in srgb,var(--ok) 35%,var(--card))}
+.cpplus{color:var(--muted);font-size:24px}
+.cpparts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}.cppart{font-size:28px;min-width:2.2em;padding:6px 14px;border-radius:16px}
+.cppart.no{background:color-mix(in srgb,var(--bad) 22%,var(--card))}
+.cpsum{display:grid;gap:8px}.cpg{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;background:var(--card);border-radius:14px;padding:8px 12px}
+.cpg>b{font-size:22px;background:var(--hub);color:#4a3720;border-radius:10px;padding:0 10px}.cpg small{color:var(--muted);margin-left:3px}
+.mtgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:520px){.mtgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.mtc{position:relative;min-height:84px;padding:6px;border-radius:16px;background:linear-gradient(135deg,var(--zh),color-mix(in srgb,var(--zh) 60%,#fff));box-shadow:0 4px 0 color-mix(in srgb,var(--zh),#4a3720 30%)}
+.mtc .mtb{font-family:var(--display);font-size:30px;font-weight:900;color:#fff}
+.mtc .mtf{display:none}
+.mtc.up{background:var(--card);box-shadow:0 4px 0 var(--line)}.mtc.up .mtb{display:none}.mtc.up .mtf{display:grid;gap:2px;justify-items:center;font-size:17px;font-weight:700}
+.mtf small{font-size:11px;color:var(--muted);font-weight:400}.mtf.old{color:#a5452a}
+.mtc.got{background:color-mix(in srgb,var(--ok) 26%,var(--card));opacity:1}
+.mtsum{display:flex;flex-wrap:wrap;gap:8px}.mtsum span{background:var(--card);border-radius:12px;padding:4px 12px}
+.cjans{margin:0;padding-left:1.6em;display:grid;gap:4px;font-size:20px;min-height:1.6em}
+.cjopts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}.cjopts button{font-size:19px;padding:10px}.cjopts button.ok{background:color-mix(in srgb,var(--ok) 26%,var(--card))}
+.fbin{background:color-mix(in srgb,var(--bc) 55%,var(--card));padding:10px 6px}.fbin b{font-size:17px}
+.scard .okm{color:var(--ok)}
+.jgcard{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;background:var(--card);border-radius:20px;padding:16px 18px;box-shadow:0 4px 0 var(--line)}
+.jgcard p{margin:0;font-size:19px;font-weight:700}.jgicon{font-size:34px}
+.jgbtns{display:grid;gap:10px}.jgbtns button{padding:12px 10px;font-weight:700;border-radius:16px}
+.jgbtns button.ok{background:color-mix(in srgb,var(--ok) 30%,var(--card));box-shadow:0 3px 0 var(--ok)}.jgbtns button.no{background:color-mix(in srgb,var(--bad) 26%,var(--card));box-shadow:0 3px 0 var(--bad)}
+.jge{display:grid;gap:10px;justify-items:start}
+.scphone{max-width:440px;width:100%;justify-self:center;background:#2f3a44;border-radius:28px;padding:14px 12px 18px;box-shadow:0 6px 0 #1d252c;display:grid;gap:8px}
+.scfrom{color:#e8eef5;font-size:13px;font-weight:700;text-align:center}
+.scmsg{background:#fdfdf8;border-radius:18px;padding:12px;display:grid;gap:6px}
+.scphone.chat .scmsg{background:#e9f6e2}.scphone.post .scmsg{background:#fff}.scphone.web .scmsg{background:#f1f4ff}
+.scseg{text-align:left;font-size:16px;color:#3a3a3a;background:transparent;box-shadow:none;border-radius:10px;padding:4px 8px;border:2px dashed transparent;display:grid;gap:2px}
+.scseg:hover:not(:disabled){border-color:#d8c8a0}
+.scseg.mark{border-color:#e8590c;background:#fff1e6}
+.scseg.hit{border-color:var(--ok);background:#e6f6ec;opacity:1}.scseg.missed{border-color:#e8590c;background:#fff1e6;opacity:1}.scseg.over{text-decoration:line-through;opacity:.7}
+.scseg small{font-size:13px;color:#8a5a00;font-weight:700}
+.enwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:center}
+@media (max-width:700px){.enwrap{grid-template-columns:minmax(0,1fr)}}
+.encity svg{width:100%;height:auto;display:block;border-radius:16px}
+.enmeters{display:grid;gap:8px}
+.enbar{display:grid;grid-template-columns:5em minmax(0,1fr) 5.4em;gap:8px;align-items:center;font-size:13.5px}
+.enbar b{text-align:right;font-variant-numeric:tabular-nums}
+.entr{position:relative;height:12px;border-radius:99px;background:var(--line);overflow:visible}
+.entr i{display:block;height:100%;border-radius:99px;transition:width .3s}
+.entr em{position:absolute;top:-4px;bottom:-4px;width:3px;margin-left:-1px;background:var(--ink);border-radius:2px}
+.enlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:8px}
+.enrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--card);border-radius:16px;padding:8px 12px}
+.enic{font-size:24px}.enn{display:grid;min-width:0}.enn small{color:var(--muted);font-size:12px}
+.enctl{display:flex;align-items:center;gap:6px}.enctl button{width:34px;height:34px;padding:0;font-size:18px;font-weight:900}.enctl b{min-width:1.2em;text-align:center;font-variant-numeric:tabular-nums}
+
 /* 英文島遊戲 */
 .gameroot{display:grid;gap:16px}.gpart{display:grid}
 .game{gap:12px}
@@ -6041,8 +6108,313 @@ function mountSort(root,k,i,l){
   root.querySelectorAll("[data-m]").forEach(b=>b.addEventListener("click",()=>{mode=b.dataset.m;intro()}));
   intro();return stop}
 
-const GAME={mount(el,k,i){const l=LESSONS[k][i];const a=document.createElement("div"),b=document.createElement("div");a.className=b.className="gpart";el.innerHTML="";el.append(a,b);
-  const s1=l.game.dig?mountDig(a,k,i,l):()=>{},s2=l.game.sort?mountSort(b,k,i,l):()=>{};return ()=>{s1();s2()}}};
+/* ===== 國文島與社會島的遊戲 ===== */
+const gRec=(id,key)=>{const G=gameLoad();return ((G[id]||{})[key])||{}};
+const gPut=(id,key,v)=>{const G=gameLoad();G[id]=G[id]||{};G[id][key]=Object.assign({},G[id][key]||{},v);gameSave(G)};
+const gBest=(id,key,score)=>{const r=gRec(id,key),nb=score>(r.best||0);if(nb)gPut(id,key,{best:score});return {nb,best:Math.max(r.best||0,score)}};
+const isHan=c=>/[㐀-鿿]/.test(c);
+const gHead=(t,h)=>`<h3 class="h3row"><span>${t}</span>${h?`<span class="hint">${h}</span>`:""}</h3>`;
+
+/* ---------- 國文：錯字偵探 ---------- */
+function mountFixHunt(root,k,i,l){
+  const id=k+":"+i,all=[];(l.drill||[]).forEach(d=>{if(d.type==="fix")d.items.forEach(it=>{if(it.s.indexOf(it.w)>=0)all.push(it)})});
+  const charPool=[...new Set(LESSONS.zh.flatMap(x=>(x.drill||[]).filter(d=>d.type==="fix").flatMap(d=>d.items.flatMap(it=>[it.r,it.w]))))];
+  let run=null,timer=0;
+  root.innerHTML=`<div class="box wide game">${gHead("錯字偵探：找出藏在句子裡的錯字","點錯字，再選出正確的字")}<div id="fhRoot"></div></div>`;
+  const R=root.querySelector("#fhRoot");
+  const stop=()=>{clearInterval(timer);run=null};
+  function intro(){stop();const r=gRec(id,"fix");
+    R.innerHTML=`<div class="sortintro"><p style="margin:0">偵探社接到委託：有人把這一課的句子偷偷改了字！每一關有 3 個句子，每句藏著 1 個錯字。</p>
+      <p class="hint" style="margin:0">點到錯字後，從 4 個字裡選出正確的字才算破案。點錯沒寫錯的字扣 3 秒，選錯正確字扣 5 秒。一共 ${Math.ceil(Math.min(all.length,9)/3)} 關，剩下的秒數會變成分數。${r.best?`最高分：<b>${r.best}</b>`:""}</p>
+      <button type="button" class="pri" id="fhGo">開始辦案</button></div>`;
+    R.querySelector("#fhGo").addEventListener("click",start)}
+  function start(){stop();const items=shuffle(all).slice(0,9);run={rounds:[],ri:0,score:0,miss:0,log:[]};for(let j=0;j<items.length;j+=3)run.rounds.push(items.slice(j,j+3));round()}
+  function round(){const rs=run.rounds[run.ri];run.t=60;run.found=0;run.sel=null;
+    R.innerHTML=`<div class="sorthud"><span>第 ${run.ri+1} / ${run.rounds.length} 關</span><span id="fhT"></span><span id="fhC"></span><span>分數 ${run.score}</span></div>
+      <div class="fhsents">${rs.map((it,si)=>`<p class="fhs" data-si="${si}">${[...it.s].map((c,ci)=>isHan(c)?`<button type="button" class="fhc" data-ci="${ci}">${c}</button>`:`<span class="fhp">${c}</span>`).join("")}</p>`).join("")}</div>
+      <div id="fhPick" class="fhpick" aria-live="polite"><p class="hint" style="margin:0">點一下你覺得寫錯的字。</p></div>`;
+    hud();R.querySelectorAll(".fhc").forEach(b=>b.addEventListener("click",()=>tap(b)));
+    timer=setInterval(()=>{if(!run)return;run.t--;hud();if(run.t<=0){clearInterval(timer);endRound(true)}},1000)}
+  function hud(){const T=R.querySelector("#fhT"),C=R.querySelector("#fhC");if(T){T.textContent=`⏱ ${Math.max(0,run.t)} 秒`;T.classList.toggle("late",run.t<=10)}if(C)C.textContent=`破案 ${run.found} / ${run.rounds[run.ri].length}`}
+  function tap(b){if(!run)return;const si=+b.closest(".fhs").dataset.si,ci=+b.dataset.ci,it=run.rounds[run.ri][si];
+    if(b.classList.contains("fixed"))return;
+    if(ci!==it.s.indexOf(it.w)){run.t=Math.max(0,run.t-3);run.miss++;b.classList.add("shake","nope");setTimeout(()=>b.classList.remove("shake"),350);hud();toast("這個字沒有寫錯，扣 3 秒。");return}
+    R.querySelectorAll(".fhc.sel").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");
+    const opts=shuffle([it.r,...shuffle(charPool.filter(c=>c!==it.r&&c!==it.w)).slice(0,3)]);
+    const P=R.querySelector("#fhPick");P.innerHTML=`<p style="margin:0">找到錯字「<b class="noc">${it.w}</b>」！正確的字應該是：</p><div class="fhopts">${opts.map(c=>`<button type="button" data-c="${c}">${c}</button>`).join("")}</div>`;
+    P.querySelectorAll("[data-c]").forEach(o=>o.addEventListener("click",()=>{if(o.dataset.c===it.r){b.textContent=it.r;b.classList.remove("sel");b.classList.add("fixed");b.disabled=true;run.found++;run.log.push(it);
+        P.innerHTML=`<p style="margin:0"><b class="okc">破案！</b>「${it.w}」改成「${it.r}」：${it.s.replace(it.w,`<b>${it.r}</b>`)}</p>`;hud();
+        if(run.found===run.rounds[run.ri].length){clearInterval(timer);setTimeout(()=>endRound(false),700)}}
+      else{run.t=Math.max(0,run.t-5);run.miss++;o.disabled=true;o.classList.add("no");hud();toast("不是這個字，扣 5 秒。")}}))}
+  function endRound(timeout){if(!run)return;const rs=run.rounds[run.ri];
+    if(timeout)rs.forEach(it=>{if(!run.log.includes(it))run.log.push({...it,missed:true})});
+    run.score+=Math.max(0,run.t)+run.found*10;run.ri++;
+    if(run.ri<run.rounds.length){R.querySelector("#fhPick").innerHTML=`<p style="margin:0">${timeout?"時間到！":"這一關全部破案！"}　<button type="button" class="pri" id="fhNext">下一關</button></p>`;R.querySelector("#fhNext").addEventListener("click",round);return}
+    finish()}
+  function finish(){const sc=run.score,b=gBest(id,"fix",sc),log=run.log;stop();if(b.nb&&sc>0){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc"><b>${sc}</b> 分${b.nb&&sc>0?`　<span class="streak">新紀錄！</span>`:`　最高 ${b.best} 分`}</p>
+      <div class="pwrong"><h4>偵探筆記：這些字要記住</h4>${log.map(x=>`<div class="wr">${x.missed?"⚠ 沒找到：":"✓ "}${x.s.replace(x.w,`<s>${x.w}</s><b>${x.r}</b>`)}</div>`).join("")}</div>
+      <button type="button" class="pri" id="fhRe">再辦一次案</button></div>`;R.querySelector("#fhRe").addEventListener("click",start)}
+  if(!all.length){R.innerHTML=`<p class="empty">這一課還沒有改錯字題目。</p>`;return ()=>{}}
+  intro();return stop}
+
+/* ---------- 國文：部件組字工坊 ---------- */
+function mountComp(root,k,i,l){
+  const id=k+":"+i,cd=(l.drill||[]).find(d=>d.type==="comp"),groups=cd?cd.groups:[];
+  const zy={};(l.words||[]).forEach(w=>zy[w[0]]=w[1]);
+  const qs=[];groups.forEach((g,gi)=>g.sents.forEach(s=>qs.push({gi,s:s[0],a:s[1]})));
+  let run=null;
+  root.innerHTML=`<div class="box wide game">${gHead("部件組字工坊","把部件放上工作台，組出句子要的字")}<div id="cpRoot"></div></div>`;
+  const R=root.querySelector("#cpRoot");
+  function intro(){const r=gRec(id,"comp");R.innerHTML=`<div class="sortintro"><p style="margin:0">工作台上有一個「基本部件」，從下面挑一個部件跟它組合，組出能填進句子的字。</p>
+      <p class="hint" style="margin:0">一共 ${qs.length} 題。組出別的字也會告訴你那是什麼字。失誤 0–1 次 ★★★、2–3 次 ★★、4 次以上 ★。${r.best?`最佳：${STARS(r.best)}`:""}</p><button type="button" class="pri" id="cpGo">開工</button></div>`;
+    R.querySelector("#cpGo").addEventListener("click",start)}
+  function start(){run={q:shuffle(qs),n:0,miss:0,wrong:[]};ask()}
+  function ask(){const q=run.q[run.n],g=groups[q.gi];
+    const extra=shuffle(groups.filter((_,j)=>j!==q.gi).flatMap(x=>x.parts.map(p=>p[0])).filter(p=>!g.parts.some(gp=>gp[0]===p))).slice(0,2);
+    const parts=shuffle([...new Set([...g.parts.map(p=>p[0]),...extra])]);
+    R.innerHTML=`<div class="sorthud"><span>第 ${run.n+1} / ${run.q.length} 題</span><span>失誤 ${run.miss}</span></div>
+      <p class="cpsent">${q.s.replace("＿",`<span class="cpblank" id="cpB">？</span>`)}</p>
+      <div class="cpbench"><span class="cpbase">${g.base}</span><span class="cpplus">＋</span><span class="cpslot" id="cpSlot">?</span><span class="cpplus">＝</span><span class="cpout" id="cpOut">?</span></div>
+      <div class="cpparts">${parts.map(p=>`<button type="button" class="cppart" data-p="${p}">${p}</button>`).join("")}</div><p class="expl" id="cpE" aria-live="polite"></p>`;
+    R.querySelectorAll(".cppart").forEach(b=>b.addEventListener("click",()=>pick(b,q,g)))}
+  function pick(b,q,g){const p=b.dataset.p,hit=g.parts.find(x=>x[0]===p),E=R.querySelector("#cpE");R.querySelector("#cpSlot").textContent=p;
+    if(hit&&hit[1]===q.a){R.querySelector("#cpOut").textContent=q.a;R.querySelector("#cpOut").classList.add("ok");R.querySelector("#cpB").textContent=q.a;R.querySelector("#cpB").classList.add("ok");
+      R.querySelectorAll(".cppart").forEach(x=>x.disabled=true);E.innerHTML=`<b class="okc">組好了！</b>${g.base}＋${p}＝${q.a}${zy[q.a]?`（${zy[q.a]}）`:""}　${q.s.replace("＿",q.a)}`;
+      run.n++;setTimeout(()=>run.n<run.q.length?ask():finish(),1300)}
+    else{run.miss++;run.wrong.push(q);b.disabled=true;b.classList.add("no");R.querySelector("#cpOut").textContent=hit?hit[1]:"✕";R.querySelector("#cpOut").classList.remove("ok");
+      E.innerHTML=hit?`組出「${hit[1]}」，但句子「${q.s.replace("＿","○")}」不是用這個字，再試試。`:`「${g.base}」和「${p}」組不成這一課的字，再試試。`;
+      R.querySelector(".sorthud span:last-child").textContent=`失誤 ${run.miss}`}}
+  function finish(){const st=run.miss<=1?3:run.miss<=3?2:1,r=gRec(id,"comp");if(st>(r.best||0))gPut(id,"comp",{best:st});if(st===3){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc">${STARS(st)}　失誤 ${run.miss} 次</p>
+      <div class="cpsum">${groups.map(g=>`<div class="cpg"><b>${g.base}</b>${g.parts.map(p=>`<span>${p[0]}＋${g.base}＝<b>${p[1]}</b>${zy[p[1]]?`<small>${zy[p[1]]}</small>`:""}</span>`).join("")}</div>`).join("")}</div>
+      <button type="button" class="pri" id="cpRe">再組一次</button></div>`;R.querySelector("#cpRe").addEventListener("click",start)}
+  if(!qs.length){R.innerHTML=`<p class="empty">這一課還沒有部件組字題目。</p>`;return ()=>{}}
+  intro();return ()=>{}}
+
+/* ---------- 國文：古今翻譯配對＋〈村居〉排序 ---------- */
+const OLDNEW=[["甚念","很想念"],["解手","上廁所"],["散學","放學"],["紙鳶","風箏"],["吾","我"],["備感慚愧","覺得很不好意思"],["歸來","回來"],["東風","春天的風"],["忙趁","趕緊趁著"],["拂堤","輕輕掠過河堤"],["二月天","農曆二月的春天"],["鶯飛","黃鶯飛舞"]];
+const CUNJU=["草長鶯飛二月天","拂堤楊柳醉春煙","兒童散學歸來早","忙趁東風放紙鳶"];
+function mountMatch(root,k,i,l){
+  const id=k+":"+i;let run=null,timer=0;
+  root.innerHTML=`<div class="box wide game">${gHead("古今翻譯配對","翻開兩張牌，古代用語配上現代說法")}<div id="mtRoot"></div></div>
+    <div class="box wide game">${gHead("〈村居〉詩句排序","照順序點出四句詩")}<div id="cjRoot"></div></div>`;
+  const R=root.querySelector("#mtRoot"),P=root.querySelector("#cjRoot");
+  const stop=()=>{clearInterval(timer)};
+  function intro(){stop();const r=gRec(id,"match");R.innerHTML=`<div class="sortintro"><p style="margin:0">12 張牌裡藏著 6 組「古代用語 ↔ 現代說法」。每次翻兩張，配成一對就會留下來。</p><p class="hint" style="margin:0">翻牌次數越少、時間越短分數越高。${r.best?`最高分：<b>${r.best}</b>`:""}</p><button type="button" class="pri" id="mtGo">開始翻牌</button></div>`;
+    R.querySelector("#mtGo").addEventListener("click",start)}
+  function start(){stop();const pairs=shuffle(OLDNEW).slice(0,6);const cards=shuffle(pairs.flatMap((p,pi)=>[{pi,t:p[0],old:1},{pi,t:p[1],old:0}]));
+    run={pairs,cards,open:[],done:0,flips:0,t0:Date.now(),lock:false};
+    R.innerHTML=`<div class="sorthud"><span id="mtF">翻牌 0 次</span><span id="mtT">0 秒</span><span id="mtD">配對 0 / 6</span></div><div class="mtgrid">${cards.map((c,j)=>`<button type="button" class="mtc" data-j="${j}" aria-label="第 ${j+1} 張牌"><span class="mtb">?</span><span class="mtf ${c.old?"old":"new"}">${c.t}<small>${c.old?"古":"今"}</small></span></button>`).join("")}</div><p class="expl" id="mtE" aria-live="polite"></p>`;
+    R.querySelectorAll(".mtc").forEach(b=>b.addEventListener("click",()=>flip(b)));
+    timer=setInterval(()=>{const T=R.querySelector("#mtT");if(T)T.textContent=`${Math.round((Date.now()-run.t0)/1000)} 秒`},1000)}
+  function flip(b){if(run.lock||b.classList.contains("up"))return;b.classList.add("up");b.setAttribute("aria-label",run.cards[+b.dataset.j].t);run.open.push(b);
+    if(run.open.length<2)return;run.flips++;R.querySelector("#mtF").textContent=`翻牌 ${run.flips} 次`;const [a,c]=run.open.map(x=>run.cards[+x.dataset.j]);
+    if(a.pi===c.pi&&a.old!==c.old){run.open.forEach(x=>{x.classList.add("got");x.disabled=true});run.open=[];run.done++;const p=run.pairs[a.pi];
+      R.querySelector("#mtE").innerHTML=`<b class="okc">配對成功！</b>「${p[0]}」＝「${p[1]}」`;R.querySelector("#mtD").textContent=`配對 ${run.done} / 6`;if(run.done===6)setTimeout(finish,600)}
+    else{run.lock=true;setTimeout(()=>{run.open.forEach(x=>{x.classList.remove("up");x.setAttribute("aria-label","牌")});run.open=[];run.lock=false},900)}}
+  function finish(){stop();const sec=Math.round((Date.now()-run.t0)/1000),sc=Math.max(10,200-run.flips*8-sec),b=gBest(id,"match",sc);if(b.nb){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc"><b>${sc}</b> 分　翻牌 ${run.flips} 次・${sec} 秒${b.nb?`　<span class="streak">新紀錄！</span>`:`　最高 ${b.best} 分`}</p>
+      <div class="mtsum">${run.pairs.map(p=>`<span><b>${p[0]}</b> → ${p[1]}</span>`).join("")}</div><button type="button" class="pri" id="mtRe">再玩一次（換一組牌）</button></div>`;R.querySelector("#mtRe").addEventListener("click",start)}
+  /* 詩句排序 */
+  function poem(){let order=[],miss=0;const lines=shuffle(CUNJU.map((t,j)=>({t,j})));
+    P.innerHTML=`<p class="hint" style="margin:0">高鼎〈村居〉四句被打亂了，依照第一句到第四句的順序點下去。</p><ol class="cjans" id="cjA"></ol><div class="cjopts">${lines.map(x=>`<button type="button" data-j="${x.j}">${x.t}</button>`).join("")}</div><p class="expl" id="cjE" aria-live="polite"></p>`;
+    P.querySelectorAll(".cjopts button").forEach(b=>b.addEventListener("click",()=>{const j=+b.dataset.j,E=P.querySelector("#cjE");
+      if(j===order.length){order.push(j);b.disabled=true;b.classList.add("ok");P.querySelector("#cjA").insertAdjacentHTML("beforeend",`<li>${CUNJU[j]}</li>`);E.textContent="";
+        if(order.length===4){E.innerHTML=`<b class="okc">完成！</b>失誤 ${miss} 次。意思：二月春天草木生長、黃鶯飛舞，河堤邊的楊柳在春天的霧氣中輕輕擺動，好像喝醉了；孩子們放學早早回家，趕緊趁著春風放風箏。<button type="button" class="ghost" id="cjRe">再排一次</button>`;P.querySelector("#cjRe").addEventListener("click",poem)}}
+      else{miss++;b.classList.add("shake");setTimeout(()=>b.classList.remove("shake"),350);E.textContent=`這句不是第 ${order.length+1} 句，再想想詩裡的時間和動作順序。`}}))}
+  intro();poem();return stop}
+
+/* ---------- 共用：掉落分類（多個籃子） ---------- */
+function mountFall(root,k,i,cfg){
+  const id=k+":"+i;let run=null,raf=0;const n=cfg.bins.length;
+  root.innerHTML=`<div class="box wide game">${gHead(cfg.title,`按下面的${cfg.binName||"籃子"}${n<=5?`，或鍵盤 1–${n}`:""}`)}<div id="flRoot"></div></div>`;
+  const R=root.querySelector("#flRoot");
+  const stop=()=>{cancelAnimationFrame(raf);run=null;document.removeEventListener("keydown",onKey)};
+  function onKey(e){if(!run)return;const d=+e.key;if(d>=1&&d<=n){e.preventDefault();choose(d-1)}}
+  function intro(){stop();const r=gRec(id,cfg.key);R.innerHTML=`<div class="sortintro"><p style="margin:0">${cfg.intro}</p><p class="hint" style="margin:0">一回 ${cfg.count} 張、3 顆愛心，卡片越掉越快，連對有加分。${r.best?`最高分：<b>${r.best}</b>`:""}</p><button type="button" class="pri" id="flGo">開始</button></div>`;
+    R.querySelector("#flGo").addEventListener("click",start)}
+  function start(){stop();run={q:shuffle(cfg.items).slice(0,cfg.count),n:0,score:0,hearts:3,combo:0,wrong:[],lock:false};
+    R.innerHTML=`<div class="sorthud"><span id="sH"></span><span id="sS"></span><span id="sN"></span></div><div class="sortfield"><div class="scard" id="sC" aria-live="assertive"></div></div>
+      <div class="sortbins" style="grid-template-columns:repeat(${n},minmax(0,1fr))">${cfg.bins.map((b,j)=>`<button type="button" class="sbin fbin" data-b="${j}" style="--bc:${cfg.colors?cfg.colors[j]:"var(--btn)"}"><small>${j+1}</small><b>${b}</b></button>`).join("")}</div>`;
+    R.querySelectorAll(".sbin").forEach(b=>b.addEventListener("click",()=>choose(+b.dataset.b)));document.addEventListener("keydown",onKey);next()}
+  function hud(){R.querySelector("#sH").textContent="♥".repeat(run.hearts)+"♡".repeat(3-run.hearts);R.querySelector("#sS").textContent=`分數 ${run.score}`;R.querySelector("#sN").textContent=`第 ${Math.min(run.n,run.q.length)} / ${run.q.length} 張${run.combo>1?`・連對 ${run.combo}`:""}`}
+  function next(){if(!run)return;if(run.n>=run.q.length||run.hearts<=0)return end();const c=run.q[run.n++];run.card=c;run.lock=false;run.dur=Math.max(4,9-run.n*.3);run.t0=performance.now();
+    const C=R.querySelector("#sC"),F=R.querySelector(".sortfield");C.className="scard";C.innerHTML=`<span>${c.s}</span>`;C.style.top="0px";hud();
+    const tick=now=>{if(!run||run.lock)return;const p=(now-run.t0)/1000/run.dur,max=F.clientHeight-C.offsetHeight-6;C.style.top=Math.min(1,p)*max+"px";if(p>=1){choose(-1);return}raf=requestAnimationFrame(tick)};raf=requestAnimationFrame(tick)}
+  function choose(b){if(!run||run.lock||!run.card)return;run.lock=true;cancelAnimationFrame(raf);const c=run.card,ok=b===c.a,C=R.querySelector("#sC");
+    if(ok){run.combo++;run.score+=10+Math.min(run.combo-1,5)*2;C.classList.add("good");C.innerHTML+=`<em class="okm">${cfg.bins[c.a]} ✓</em>`}
+    else{run.combo=0;run.hearts--;run.wrong.push(c);C.classList.add("bad");C.innerHTML+=`<em>${b<0?"來不及了！":"放錯了！"}答案是「${cfg.bins[c.a]}」</em>`}
+    hud();setTimeout(next,ok?650:1700)}
+  function end(){const sc=run.score,w=run.wrong;stop();const b=gBest(id,cfg.key,sc);if(b.nb&&sc>0){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc"><b>${sc}</b> 分${b.nb&&sc>0?`　<span class="streak">新紀錄！</span>`:`　最高 ${b.best} 分`}</p>
+      ${w.length?`<div class="pwrong"><h4>這幾張要再記一下</h4>${w.map(x=>`<div class="wr">${x.s} → <b>${cfg.bins[x.a]}</b>${x.e?`<p class="expl">${x.e}</p>`:""}</div>`).join("")}</div>`:`<p class="pallok">全部分對，太厲害了！</p>`}
+      ${cfg.tip?`<p class="hint" style="margin:0">${cfg.tip}</p>`:""}<button type="button" class="pri" id="flRe">再玩一次</button></div>`;R.querySelector("#flRe").addEventListener("click",start)}
+  intro();return stop}
+const SHELF={key:"shelf",title:"小說書店上架",binName:"書架",count:15,bins:["冒險","歷史","武俠","偵探","奇幻"],colors:["#9fd8b5","#e8c48f","#f2a98f","#a9c4ef","#d2b4f0"],
+  intro:"書店進了一批新書！每本書掉下來時會附上一段簡介，把它放上正確的書架。",tip:"冒險：在陌生環境突破困境；歷史：以真實的時代和人物為背景；武俠：古代江湖、武功和俠義；偵探：從線索推理出真相；奇幻：有魔法或不存在的世界。",
+  items:[{s:"少年獨自駕帆船橫渡大海，遇上暴風雨和鯊魚",a:0},{s:"一群朋友深入叢林，尋找傳說中的瀑布",a:0},{s:"飛機迫降在雪山，主角想盡辦法求生",a:0},{s:"男孩在無人島上學會搭屋、捕魚，等待救援",a:0},
+    {s:"以唐朝長安城為背景，描寫一位畫師的一生",a:1},{s:"改寫鄭成功率軍來到臺灣的經過",a:1},{s:"二戰期間，一個孩子跟著家人在城市間逃難",a:1},{s:"描寫清朝末年老百姓的生活與重要人物",a:1},
+    {s:"少年拜師學劍，行俠仗義，對抗欺壓百姓的惡霸",a:2},{s:"江湖門派舉行比武大會，高手用輕功飛簷走壁",a:2},{s:"俠客為了報恩，千里護送一封密信",a:2},{s:"各大門派爭奪一本失傳的武功祕笈",a:2},
+    {s:"博物館的名畫一夜消失，偵探從腳印找出真相",a:3},{s:"學校的獎盃被調包，小偵探逐一詢問證人",a:3},{s:"密室裡只留下一張寫滿密碼的紙條",a:3},{s:"從一張火車票推理出嫌犯的行蹤",a:3},
+    {s:"女孩打開衣櫃，走進會說話的動物王國",a:4},{s:"少年發現自己能和龍溝通，開始學習魔法",a:4},{s:"一顆神奇寶石讓整座城市漂浮在空中",a:4},{s:"主角穿越到有精靈和巨龍的世界",a:4}]};
+
+/* ---------- 共用：判決卡（逐張判斷、看說明） ---------- */
+function mountJudge(root,k,i,cfg){
+  const id=k+":"+i;let run=null,ri=0;
+  root.innerHTML=`<div class="box wide game">${gHead(cfg.title,cfg.hint)}<div id="jgRoot"></div></div>`;
+  const R=root.querySelector("#jgRoot");
+  function intro(){const r=gRec(id,cfg.key);R.innerHTML=`<div class="sortintro"><p style="margin:0">${cfg.intro}</p>
+      <div class="chips">${cfg.rounds.map((x,j)=>`<button type="button" class="chip${j===ri?" on":""}" data-r="${j}">${x.name}</button>`).join("")}</div>
+      <p class="hint" style="margin:0">${cfg.rounds[ri].desc}　答對 ${cfg.rounds[ri].items.length} 題中的 90% 以上 ★★★、70% ★★。${r["r"+ri]?`最佳：${STARS(r["r"+ri])}`:""}</p><button type="button" class="pri" id="jgGo">開始</button></div>`;
+    R.querySelectorAll("[data-r]").forEach(b=>b.addEventListener("click",()=>{ri=+b.dataset.r;intro()}));R.querySelector("#jgGo").addEventListener("click",start)}
+  function start(){const rd=cfg.rounds[ri];run={q:shuffle(rd.items),n:0,ok:0,combo:0,wrong:[]};ask()}
+  function ask(){const rd=cfg.rounds[ri],it=run.q[run.n];
+    R.innerHTML=`<div class="sorthud"><span>${rd.name}</span><span>第 ${run.n+1} / ${run.q.length} 件</span><span>${cfg.unit||"答對"} ${run.ok}</span>${run.combo>1?`<span class="streak">連對 ${run.combo}</span>`:""}</div>
+      <div class="jgcard"><span class="jgicon" aria-hidden="true">${rd.icon||"⚖"}</span><p>${it.s}</p></div>
+      <div class="jgbtns" style="grid-template-columns:repeat(${rd.labels.length>4?3:rd.labels.length},minmax(0,1fr))">${rd.labels.map((b,j)=>`<button type="button" data-b="${j}">${b}</button>`).join("")}</div><div id="jgE" class="jge" aria-live="polite"></div>`;
+    R.querySelectorAll(".jgbtns button").forEach(b=>b.addEventListener("click",()=>answer(+b.dataset.b,b)))}
+  function answer(b,btn){const rd=cfg.rounds[ri],it=run.q[run.n],ok=b===it.a;R.querySelectorAll(".jgbtns button").forEach(x=>x.disabled=true);R.querySelectorAll(".jgbtns button")[it.a].classList.add("ok");
+    if(ok){run.ok++;run.combo++}else{btn.classList.add("no");run.combo=0;run.wrong.push(it)}
+    R.querySelector("#jgE").innerHTML=`<p style="margin:0"><b class="${ok?"okc":"noc"}">${ok?(rd.okWord||"判決正確！"):"判錯了。"}</b>答案是「${rd.labels[it.a]}」。${it.e||""}</p><button type="button" class="pri" id="jgN">${run.n+1<run.q.length?"下一件":"看結果"}</button>`;
+    const N=R.querySelector("#jgN");N.focus({preventScroll:true});N.addEventListener("click",()=>{run.n++;run.n<run.q.length?ask():finish()})}
+  function finish(){const rd=cfg.rounds[ri],p=run.ok/run.q.length,st=p>=.9?3:p>=.7?2:1,r=gRec(id,cfg.key);if(st>(r["r"+ri]||0))gPut(id,cfg.key,{["r"+ri]:st});if(st===3){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc">${STARS(st)}　答對 ${run.ok} / ${run.q.length}</p>
+      ${run.wrong.length?`<div class="pwrong"><h4>再看一次</h4>${run.wrong.map(x=>`<div class="wr">${x.s} → <b>${rd.labels[x.a]}</b>${x.e?`<p class="expl">${x.e}</p>`:""}</div>`).join("")}</div>`:`<p class="pallok">全部正確！</p>`}
+      ${rd.tip?`<p class="hint" style="margin:0">${rd.tip}</p>`:""}<div class="subact"><button type="button" class="pri" id="jgRe">再玩一次</button>${cfg.rounds.length>1?`<button type="button" id="jgM">換一關</button>`:""}</div></div>`;
+    R.querySelector("#jgRe").addEventListener("click",start);const M=R.querySelector("#jgM");if(M)M.addEventListener("click",()=>{ri=(ri+1)%cfg.rounds.length;intro()})}
+  intro();return ()=>{}}
+const JUDGE41={key:"judge",title:"規範小法官",hint:"判斷每件事屬於哪一種規範",unit:"判決",
+  intro:"法官上任！每一件生活小事，請判斷它屬於哪一種社會規範。判完會告訴你違反時會有什麼後果。",
+  rounds:[{name:"四種規範",icon:"⚖",desc:"風俗習慣、宗教信仰、道德、法律，選一個。",labels:["風俗習慣","宗教信仰","道德","法律"],
+    tip:"只有法律有強制力；違反道德會受良心或輿論譴責；風俗和宗教靠大家長久形成的習慣與信仰約束。",
+    items:[{s:"過年時，長輩包紅包給晚輩",a:0,e:"長時間流傳形成的節慶習慣。"},{s:"端午節划龍舟、吃粽子",a:0,e:"受文化影響形成的節慶風俗。"},{s:"婚禮改用電子喜帖邀請親友",a:0,e:"科技改變了風俗習慣的做法。"},
+      {s:"進廟參拜時，依照廟方規定的順序拈香",a:1,e:"參與宗教活動時要遵守相關規定與禮儀。"},{s:"告示寫著「舉頭三尺有神明」，提醒不要亂丟垃圾",a:1,e:"用宗教信仰提醒大家，但沒有強制力。"},{s:"參加法會時保持安靜、遵守儀式",a:1,e:"宗教活動的禮儀。"},
+      {s:"在公車上主動讓座給孕婦",a:2,e:"助人是道德；不讓座不會被處罰，但可能被輿論批評。"},{s:"車停在自家門前白線上，沒違規卻擋住鄰居進出",a:2,e:"沒有違法，但不顧他人感受，違反道德。"},{s:"答應幫朋友保密，卻到處說出去",a:2,e:"違反誠實守信，會受良心或他人的譴責。"},
+      {s:"汽車在斑馬線前沒有禮讓行人，被開罰單",a:3,e:"違反道路交通管理處罰條例，最高可罰 6,000 元，有強制力。"},{s:"騎腳踏車闖紅燈",a:3,e:"腳踏車也要遵守交通法規。"},{s:"店家把香菸賣給國中生",a:3,e:"兒童及少年福利與權益保障法禁止販賣菸酒給兒少。"},{s:"未經同意下載並轉傳付費影片",a:3,e:"侵犯著作權，要負法律責任。"}]},
+   {name:"道德還是法律？",icon:"🔨",desc:"只分道德和法律，想想有沒有強制力。",labels:["道德","法律"],tip:"道德：人與人相處自然形成，違反受良心或輿論譴責。法律：由立法機關制定，有強制力，由法院依法判決。",
+    items:[{s:"排隊時插隊，被其他人指責",a:0},{s:"在網路留言辱罵別人，被告上法院",a:1,e:"言論自由不能用來誹謗、侮辱他人。"},{s:"同學忘記帶課本，借他一起看",a:0},{s:"駕駛人酒後開車被警察攔下處罰",a:1},
+      {s:"說好要一起打掃卻偷偷溜走",a:0},{s:"博物館依照年齡，提供兒童優待票",a:1,e:"法律規定以年齡為標準提供兒童優待，保障兒少權益。"},{s:"撿到同學的橡皮擦，主動歸還",a:0},{s:"商家依規定開立統一發票",a:1,e:"統一發票是向政府繳稅的證明。"}]}]};
+const DEMO42={key:"demo",title:"民主小鎮任務",hint:"把任務派給正確的機關，分出權利和義務",unit:"完成",
+  intro:"你是民主小鎮的小鎮長助理，要把每一項工作交給負責的機關，還要分清楚人民的權利和義務。",
+  rounds:[{name:"派任務給機關",icon:"🏛",desc:"中央五院和地方政府、議會，誰負責這件事？",labels:["行政院","立法院","司法院（法院）","考試院","監察院","縣市政府","縣市議會"],okWord:"派對了！",
+    tip:"行政院：推動政策；立法院：制定法律、審查預算；司法院：依法審判；考試院：國家考試；監察院：監督公務員；縣市政府：執行地方建設；縣市議會：監督地方施政。",
+    items:[{s:"提出「行人優先交通安全」政策",a:0,e:"行政院負責規劃與推動全國性政策。"},{s:"通過修法，加重不禮讓行人的處罰",a:1,e:"立法院由民意代表組成，負責制定法律。"},{s:"依法審判交通事故的爭議案件",a:2,e:"司法院所屬法院依法審判。"},
+      {s:"舉辦國家考試，選出公務人員",a:3,e:"考試院負責國家考試。"},{s:"調查公務人員有沒有違法失職",a:4,e:"監察院負責監督公務人員。"},{s:"在學校附近劃設行人優先區",a:5,e:"地方政府執行中央政策，依在地需求推動建設。"},
+      {s:"監督縣市政府有沒有落實行人優先區",a:6,e:"縣市議會由地方民意代表組成，監督地方施政。"},{s:"審查中央政府一年的預算",a:1,e:"立法院也負責審查預算。"},{s:"在社區興建公園和運動中心",a:5}]},
+   {name:"權利還是義務？",icon:"📜",desc:"憲法保障的權利，以及人民應盡的義務。",labels:["權利","義務","權利也是義務"],
+    tip:"參政權包括選舉、罷免、應考試、服公職；三大義務是接受國民教育、服兵役、納稅；接受國民教育既是權利也是義務。",
+    items:[{s:"年滿法定年齡後，去投票選出縣市長",a:0,e:"選舉是參政權。"},{s:"罷免不適任的民選代表",a:0,e:"罷免也是參政權。"},{s:"參加公務人員考試",a:0,e:"應考試是參政權。"},{s:"有工作收入的人繳交所得稅",a:1,e:"納稅是義務，稅金用來興建學校、公園、大眾運輸。"},
+      {s:"男性年滿十八歲後依法服兵役",a:1},{s:"六歲到十五歲的孩子到學校上課",a:2,e:"接受國民教育既是權利也是義務。"},{s:"自由選擇要住在哪一個城市",a:0,e:"居住及遷徙自由。"},{s:"在網路上發表自己的想法",a:0,e:"言論自由，但不能誹謗、侮辱他人。"}]}]};
+
+/* ---------- 社會：網路偵探 停看查 ---------- */
+const SCAMS=[
+  {from:"簡訊　0912-XXX-XXX",kind:"sms",segs:[["【恭喜中獎】","你沒有參加活動，卻說你中獎了"],["您的門號抽中最新款手機一支！",null],["請在 24 小時內","用時間壓力催你，不讓你冷靜想"],["點擊 http://bit.ly/xx8k 領獎","來源不明的短網址，可能是釣魚網站"],["並填寫姓名、地址與身分證字號。","要求重要個人資料"]],
+    acts:["馬上點連結領獎","不點連結，刪除訊息，可以打 165 反詐騙專線查證","轉傳給同學一起抽獎"],a:1,e:"不明連結和索取個資都是詐騙常見手法；有疑問可以打 165 反詐騙諮詢專線。"},
+  {from:"LINE　表哥（新帳號）",kind:"chat",segs:[["我換新號碼了，",null],["先不要跟家人說喔！","要你保密、不讓大人知道，是很大的警訊"],["我現在急需用錢，","製造緊急狀況"],["可以先幫我去超商買 3 張遊戲點數卡，","點數卡是詐騙最常要的東西，很難追回"],["拍照把序號傳給我嗎？","序號一傳出去就等於把錢送走"]],
+    acts:["照做，表哥一定會還錢","打電話給表哥本人或告訴爸媽，先確認是不是他","把序號傳過去，但只買 1 張"],a:1,e:"帳號可能被盜用或冒名。用原本的電話確認身分，並告訴家人。"},
+  {from:"社群貼文　粉專「健康大爆料」",kind:"post",segs:[["震驚！","誇張的標題，想吸引你點閱"],["每天喝這種果汁，一週成績進步 50 分！","不合理的神奇效果"],["專家都不想讓你知道","沒有說是哪位專家、哪一個研究"],["。轉傳給 10 個人就能保平安！","要求轉傳，讓錯誤資訊散播出去"]],
+    acts:["趕快轉傳給好朋友","先不轉傳，到可靠來源（例如政府網站、事實查核中心）查證","留言說「真的嗎」然後分享"],a:1,e:"看到驚人消息先停、看、查：停下來不轉傳、看來源、查證再決定。"},
+  {from:"遊戲私訊　玩家「星空小精靈」",kind:"chat",segs:[["你好厲害，我們當好朋友吧！",null],["加我的私人帳號聊天吧。","想把你帶離有人管理的地方"],["你家住在哪裡？讀哪一所學校？","打聽個人資料"],["週末偷偷出來見面，","約網友見面很危險"],["不要告訴你爸媽喔。","要你保密，是很大的警訊"]],
+    acts:["只說學校名稱，不說住址","不給個人資料、不見面，並告訴爸媽或老師","答應見面，但約在人多的地方"],a:1,e:"不要輕信網友；遇到要你保密、約見面的情況，一定要告訴信任的大人。"},
+  {from:"網站　「全部免費看」",kind:"web",segs:[["最新電影、熱門歌曲全部免費下載！","未經授權的影音，下載轉傳會侵犯著作權"],["請先關閉防毒軟體，","要你關掉保護，方便植入病毒"],["再安裝「超快播放器.exe」。","來路不明的執行檔，可能是病毒"]],
+    acts:["照著步驟下載","離開網站，改用合法的影音平台","只下載歌曲就好"],a:1,e:"任意下載影音可能侵犯著作權，不明檔案可能讓電腦中毒、個資被盜。"},
+  {from:"短影音　知名歌手推薦",kind:"post",segs:[["（影片中知名歌手說）",null],["只要投資這個平台，保證每個月賺 30%！","「保證獲利」是投資詐騙的招牌話術"],["名人親自推薦，機會難得！","可能是用 AI 做出來的假影片、假聲音"],["留言區：「我賺翻了！」「已經領到錢！」","大量好評可能是假帳號"]],
+    acts:["跟爸媽借錢投資","不相信，和家人討論，也可以檢舉這部影片","留言問怎麼加入"],a:1,e:"AI 可以做出假影片和假語音，要培養辨別真偽的能力，負責任的使用科技。"},
+  {from:"學校聯絡簿 App　班級導師",kind:"chat",segs:[["各位家長好，",null],["明天戶外教學請攜帶水壺和帽子，",null],["早上 8:00 在學校穿堂集合。",null],["若有問題請在聯絡簿留言。",null]],
+    acts:["照著準備水壺和帽子","懷疑是詐騙，什麼都不做","轉傳給全世界"],a:0,e:"不是每則訊息都可疑：來自官方管道、沒有要錢要個資、內容合理，就可以照著做。",safe:true}];
+function mountScam(root,k,i,l){
+  const id=k+":"+i;let ord=[],si=0,score=0,step=0,found=new Set(),wrongTap=0;
+  root.innerHTML=`<div class="box wide game">${gHead("網路偵探：停・看・查","點出訊息裡可疑的地方，再決定怎麼做")}<div id="scRoot"></div></div>`;
+  const R=root.querySelector("#scRoot");
+  function intro(){const r=gRec(id,"scam");R.innerHTML=`<div class="sortintro"><p style="margin:0">你是網路偵探，手機會收到 ${SCAMS.length} 則訊息。先<b>點出可疑的句子</b>，按「我找完了」，再選出最好的做法。</p>
+      <p class="hint" style="margin:0">提醒：也有完全沒問題的訊息！找到一個可疑處 +10、點錯 −5、做法選對 +20。${r.best?`最高分：<b>${r.best}</b>`:""}</p><button type="button" class="pri" id="scGo">開始調查</button></div>`;
+    R.querySelector("#scGo").addEventListener("click",()=>{ord=shuffle(SCAMS);si=0;score=0;show()})}
+  function show(){const c=ord[si];step=0;found=new Set();wrongTap=0;const nf=c.segs.filter(s=>s[1]).length;
+    R.innerHTML=`<div class="sorthud"><span>案件 ${si+1} / ${ord.length}</span><span>分數 ${score}</span></div>
+      <div class="scphone ${c.kind}"><div class="scfrom">${c.from}</div><div class="scmsg">${c.segs.map((s,j)=>`<button type="button" class="scseg" data-j="${j}">${s[0]}</button>`).join("")}</div></div>
+      <div class="subact"><button type="button" class="pri" id="scDone">我找完了</button><span class="hint">點句子標記可疑；再點一次取消。</span></div><div id="scE" class="jge" aria-live="polite"></div>`;
+    R.querySelectorAll(".scseg").forEach(b=>b.addEventListener("click",()=>{if(step)return;b.classList.toggle("mark")}));
+    R.querySelector("#scDone").addEventListener("click",check)}
+  function check(){if(step)return;step=1;const c=ord[si];let hit=0,bad=0,miss=0;
+    R.querySelectorAll(".scseg").forEach(b=>{const s=c.segs[+b.dataset.j],m=b.classList.contains("mark");b.disabled=true;
+      if(s[1]&&m){hit++;b.classList.add("hit");b.insertAdjacentHTML("beforeend",`<small>${s[1]}</small>`)}
+      else if(s[1]&&!m){miss++;b.classList.add("missed");b.insertAdjacentHTML("beforeend",`<small>漏掉了：${s[1]}</small>`)}
+      else if(!s[1]&&m){bad++;b.classList.add("over")}});
+    score+=hit*10-bad*5;score=Math.max(0,score);R.querySelector("#scDone").hidden=true;
+    const nf=c.segs.filter(s=>s[1]).length;
+    R.querySelector("#scE").innerHTML=`<p style="margin:0">${c.safe&&!bad?`<b class="okc">沒錯，這則訊息沒有可疑的地方！</b>`:`找到 ${hit} / ${nf} 個可疑處${bad?`，${bad} 句其實沒問題`:""}${miss?`，漏掉 ${miss} 個`:""}。`}</p>
+      <p style="margin:0"><b>你會怎麼做？</b></p><div class="opts">${c.acts.map((a,j)=>`<button type="button" data-a="${j}">${a}</button>`).join("")}</div><p class="expl" id="scX"></p>`;
+    R.querySelectorAll("[data-a]").forEach(b=>b.addEventListener("click",()=>act(+b.dataset.a,b)))}
+  function act(a,b){const c=ord[si],ok=a===c.a;R.querySelectorAll("[data-a]").forEach(x=>x.disabled=true);R.querySelectorAll("[data-a]")[c.a].classList.add("ok");if(!ok)b.classList.add("no");if(ok)score+=20;
+    const X=R.querySelector("#scX");X.innerHTML=`${ok?`<b class="okc">做得好！</b>`:`<b class="noc">再想想。</b>`}${c.e}　<button type="button" class="pri" id="scNx">${si+1<ord.length?"下一則":"看結果"}</button>`;
+    R.querySelector("#scNx").addEventListener("click",()=>{si++;si<ord.length?show():finish()})}
+  function finish(){const b=gBest(id,"scam",score);if(b.nb){try{confetti()}catch(e){}}
+    R.innerHTML=`<div class="sortend"><p class="sortsc"><b>${score}</b> 分${b.nb?`　<span class="streak">新紀錄！</span>`:`　最高 ${b.best} 分`}</p>
+      <div class="coach"><b>停・看・查</b><ol><li><b>停</b>：先不點連結、不轉傳、不給個資。</li><li><b>看</b>：看來源是誰、有沒有催你、要你保密、要錢要點數。</li><li><b>查</b>：找可靠來源或問家人老師，必要時打 165 反詐騙專線。</li></ol></div>
+      <button type="button" class="pri" id="scRe">再調查一次</button></div>`;R.querySelector("#scRe").addEventListener("click",()=>{ord=shuffle(SCAMS);si=0;score=0;show()})}
+  intro();return ()=>{}}
+
+/* ---------- 社會：能源城市 ---------- */
+const ENERGY=[
+  {id:"coal",n:"燃煤發電",ic:"🏭",day:15,night:15,cost:2,co2:12,eco:1,max:8,note:"便宜穩定，但排放大量二氧化碳和空氣汙染。"},
+  {id:"gas",n:"燃氣發電",ic:"🔥",day:12,night:12,cost:3,co2:6,eco:0,max:8,note:"比燃煤乾淨一些，還是會排碳。"},
+  {id:"solar",n:"太陽能",ic:"☀️",day:12,night:0,cost:3,co2:0,eco:1,max:6,note:"臺灣日照充足、不排廢氣；晚上不發電，設置不當會影響景觀、生態或農地。"},
+  {id:"wind",n:"風力發電",ic:"🌀",day:8,night:10,cost:4,co2:0,eco:1,max:5,note:"西部沿海風力穩定、不排廢氣；可能影響候鳥，噪音會干擾居民。"},
+  {id:"hydro",n:"水力發電",ic:"💧",day:10,night:10,cost:3,co2:0,eco:1,max:2,note:"乾淨，但受地形和雨量限制，能蓋的地方不多。"},
+  {id:"save",n:"推廣節能",ic:"💡",cost:1,max:3,note:"使用節能產品、隨手關燈：白天少用 10、晚上少用 7。"},
+  {id:"bat",n:"儲能電池",ic:"🔋",cost:2,max:3,note:"把白天多的 10 度電存到晚上用。"}];
+const ELV=[{t:"第 1 關：讓城市亮起來",d:"白天和晚上的電都要夠用，預算不超過 30。",ok:s=>s.dOK&&s.nOK&&s.cost<=30},
+  {t:"第 2 關：減少空汙",d:"電要夠用、預算 ≤ 32，二氧化碳排放 ≤ 50。",ok:s=>s.dOK&&s.nOK&&s.cost<=32&&s.co2<=50},
+  {t:"第 3 關：永續城市",d:"電要夠用、預算 ≤ 36、排放 ≤ 20，生態影響 ≤ 5。提示：再生能源、儲能和節能一起用。",ok:s=>s.dOK&&s.nOK&&s.cost<=36&&s.co2<=20&&s.eco<=5}];
+function mountEnergy(root,k,i,l){
+  const id=k+":"+i;let lv=Math.min(2,(gRec(id,"energy").lv||0)),cnt={};
+  root.innerHTML=`<div class="box wide game">${gHead("能源城市","調整發電方式，讓城市日夜都有電，又兼顧環保")}<div id="enRoot"></div></div>`;
+  const R=root.querySelector("#enRoot");
+  const calc=()=>{const s={day:0,night:0,cost:0,co2:0,eco:0,dd:100,dn:70};ENERGY.forEach(e=>{const c=cnt[e.id]||0;s.cost+=c*e.cost;
+      if(e.id==="save"){s.dd-=10*c;s.dn-=7*c}else if(e.id==="bat"){s.day-=10*c;s.night+=10*c}else{s.day+=c*e.day;s.night+=c*e.night;s.co2+=c*e.co2;s.eco+=c*e.eco}});
+    s.dOK=s.day>=s.dd;s.nOK=s.night>=s.dn;return s};
+  function render(){const done=gRec(id,"energy").lv||0;
+    R.innerHTML=`<div class="chips">${ELV.map((x,j)=>`<button type="button" class="chip${j===lv?" on":""}" data-lv="${j}"${j>done?" disabled":""}>${j>done?"🔒 ":j<done?"✓ ":""}${x.t}</button>`).join("")}</div>
+      <p class="hint" style="margin:0"><b>任務：</b>${ELV[lv].d}　城市需要：白天 <b id="eDD"></b> 度、晚上 <b id="eDN"></b> 度。</p>
+      <div class="enwrap"><div class="encity" id="eCity"></div><div class="enmeters" id="eM"></div></div>
+      <div class="enlist">${ENERGY.map(e=>`<div class="enrow"><span class="enic" aria-hidden="true">${e.ic}</span><div class="enn"><b>${e.n}</b><small>${e.id==="save"||e.id==="bat"?`費用 ${e.cost}`:`白天 ${e.day}・晚上 ${e.night}・費用 ${e.cost}・排碳 ${e.co2}${e.eco?"・生態 "+e.eco:""}`}</small></div>
+        <div class="enctl"><button type="button" data-m="${e.id}" aria-label="減少${e.n}">−</button><b id="c_${e.id}">0</b><button type="button" data-p="${e.id}" aria-label="增加${e.n}">＋</button></div></div>`).join("")}</div>
+      <p class="expl" id="eNote" aria-live="polite">點 ＋／− 調整，每一格代表一座發電設施或一項措施。</p><div class="subact"><button type="button" id="eReset" class="ghost">全部清空</button></div>`;
+    R.querySelectorAll("[data-lv]").forEach(b=>b.addEventListener("click",()=>{lv=+b.dataset.lv;cnt={};render()}));
+    R.querySelectorAll("[data-p],[data-m]").forEach(b=>b.addEventListener("click",()=>{const k2=b.dataset.p||b.dataset.m,e=ENERGY.find(x=>x.id===k2),c=cnt[k2]||0;
+      if(b.dataset.p){if(c>=e.max){R.querySelector("#eNote").textContent=`${e.n}最多 ${e.max} 個。${e.id==="hydro"?"水力發電受地形和雨量限制。":""}`;return}cnt[k2]=c+1}else{if(!c)return;cnt[k2]=c-1}
+      R.querySelector("#eNote").innerHTML=`${e.ic} <b>${e.n}</b>：${e.note}`;update()}));
+    R.querySelector("#eReset").addEventListener("click",()=>{cnt={};update()});update()}
+  function bar(lab,v,max,goal,good,unit=""){const p=Math.min(100,v/max*100),g=goal!=null?Math.min(100,goal/max*100):null;
+    return `<div class="enbar"><span>${lab}</span><span class="entr"><i style="width:${p}%;background:${good?"var(--ok)":"var(--bad)"}"></i>${g!=null?`<em style="left:${g}%"></em>`:""}</span><b>${v}${unit}${goal!=null?` / ${goal}`:""}</b></div>`}
+  function update(){const s=calc(),L=ELV[lv];ENERGY.forEach(e=>R.querySelector("#c_"+e.id).textContent=cnt[e.id]||0);R.querySelector("#eDD").textContent=s.dd;R.querySelector("#eDN").textContent=s.dn;
+    const cap={0:30,1:32,2:36}[lv],co2cap=[null,50,20][lv];
+    R.querySelector("#eM").innerHTML=bar("白天供電",s.day,140,s.dd,s.dOK)+bar("晚上供電",s.night,140,s.dn,s.nOK)+bar("預算",s.cost,50,cap,s.cost<=cap)+bar("二氧化碳",s.co2,120,co2cap,co2cap==null||s.co2<=co2cap)+bar("生態影響",s.eco,12,lv===2?5:null,lv<2||s.eco<=5);
+    R.querySelector("#eCity").innerHTML=citySVG(s);
+    if(L.ok(s)){const r=gRec(id,"energy");if((r.lv||0)<lv+1){gPut(id,"energy",{lv:lv+1});try{confetti()}catch(e){}toast(lv<2?`${L.t}過關！下一關解鎖了。`:"永續城市完成！你是能源規劃大師！","star");const ch=R.querySelector(`[data-lv="${lv+1}"]`);if(ch){ch.disabled=false;ch.textContent=ELV[lv+1].t}R.querySelector(`[data-lv="${lv}"]`).textContent="✓ "+L.t;
+      R.querySelector("#eNote").innerHTML=lv<2?`<b class="okc">過關！</b>白天、晚上都有電，也達成這一關的條件。<button type="button" class="pri" id="eNext">前往${ELV[lv+1].t}</button>`:`<b class="okc">永續城市完成！</b>再生能源、儲能和節能一起用，就能兼顧用電與環保。`;const nx=R.querySelector("#eNext");if(nx)nx.addEventListener("click",()=>{lv++;cnt={};render()})}
+      else R.querySelector("#eNote").innerHTML=`<b class="okc">這個組合可以過關！</b>試試看還有沒有更省錢、更環保的組合。`}}
+  function citySVG(s){const smoke=Math.min(6,Math.round(s.co2/12)),win=(ok,x,y)=>`<rect x="${x}" y="${y}" width="7" height="7" fill="${ok?"#ffd76a":"#55606a"}"/>`;
+    const bld=(x,h,ok)=>`<rect x="${x}" y="${120-h}" width="26" height="${h}" fill="#8aa0b5" stroke="#4a5866"/>${[...Array(Math.floor(h/16))].map((_,r)=>win(ok,x+4,124-h+r*16)+win(ok,x+15,124-h+r*16)).join("")}`;
+    const side=(ox,day)=>`<g transform="translate(${ox},0)"><rect width="150" height="130" fill="${day?"#bfe6f5":"#1d2b45"}"/>${day?`<circle cx="128" cy="20" r="11" fill="#ffd34d"/>`:`<circle cx="128" cy="20" r="9" fill="#f3f0d0"/>`}
+      ${[...Array(smoke)].map((_,j)=>`<circle cx="${20+j*18}" cy="${30+(j%2)*8}" r="${10+j%3*2}" fill="#7d7d7d" opacity=".55"/>`).join("")}
+      ${bld(10,70,day?s.dOK:s.nOK)}${bld(42,95,day?s.dOK:s.nOK)}${bld(74,58,day?s.dOK:s.nOK)}${bld(106,82,day?s.dOK:s.nOK)}<rect y="120" width="150" height="10" fill="#7aa35a"/>
+      <text x="75" y="14" text-anchor="middle" font-size="11" font-weight="700" fill="${day?"#3b4a57":"#e8eef5"}">${day?"白天":"晚上"}${(day?s.dOK:s.nOK)?"・燈火通明":"・停電了！"}</text></g>`;
+    return `<svg viewBox="0 0 304 130" role="img" aria-label="城市白天${s.dOK?"有電":"缺電"}、晚上${s.nOK?"有電":"缺電"}">${side(0,1)}${side(154,0)}</svg>`}
+  render();return ()=>{}}
+
+const GAMES2={fixhunt:mountFixHunt,comp:mountComp,match:mountMatch,scam:mountScam,energy:mountEnergy,
+  shelf:(r,k,i)=>mountFall(r,k,i,SHELF),judge:(r,k,i)=>mountJudge(r,k,i,JUDGE41),demo:(r,k,i)=>mountJudge(r,k,i,DEMO42)};
+
+/* 各課的遊戲 */
+["七","八","九","十","十一","十二"].forEach(n=>{const l=LESSONS.zh.find(x=>x.n===n);if(l)l.game={list:["fixhunt","comp"]}});
+[["zh","語三","shelf"],["zh","語四","match"],["soc","3-1","scam"],["soc","3-2","energy"],["soc","4-1","judge"],["soc","4-2","demo"]].forEach(([k,n,g])=>{const l=LESSONS[k].find(x=>x.n===n);if(l)l.game={list:[g]}});
+
+const GAME={mount(el,k,i){const l=LESSONS[k][i],G=l.game,stops=[];el.innerHTML="";
+  const add=f=>{const d=document.createElement("div");d.className="gpart";el.appendChild(d);const s=f(d);if(typeof s==="function")stops.push(s)};
+  if(G.dig)add(d=>mountDig(d,k,i,l));if(G.sort)add(d=>mountSort(d,k,i,l));(G.list||[]).forEach(n=>{if(GAMES2[n])add(d=>GAMES2[n](d,k,i,l))});
+  return ()=>stops.forEach(f=>{try{f()}catch(e){}})}};
 
 /* ---- 課程：重點／生字・單字／實驗／練習 四個分頁 ---- */
 const prevBadge=r=>r===null?"":`<span class="prev ${r?"ok":"no"}">${r?"上次答對":"上次答錯"}</span>`;
